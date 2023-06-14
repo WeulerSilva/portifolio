@@ -116,7 +116,7 @@ function playSound(sound) {
             floor.classList.add('floor-animation')
             removeClass(floor,'floor-animation')
             break;
-        case 'Space':
+        case 'space':
             pedal.classList.add('pedal-animation')
             removeClass(pedal,'pedal-animation')
             break;
