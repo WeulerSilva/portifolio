@@ -85,7 +85,8 @@ function playSound(sound) {
         }).catch(function(error) {
           // Automatic playback failed.
           // Show a UI element to let the user manually start playback.
-          console.log(error)
+          console.log(error);
+          console.log('oi')
         });
       }
 
