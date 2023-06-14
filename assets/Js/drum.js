@@ -79,7 +79,7 @@ function playSound(sound) {
     let audioElement = new Audio(`assets/Media/sound/${sound}.wav`)
 
     if (audioElement !== undefined) {
-        playPromise.then(function() {
+        audioElement.then(function() {
           // Automatic playback started!
           audioElement.play()
         }).catch(function(error) {
