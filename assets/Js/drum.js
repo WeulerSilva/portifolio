@@ -78,9 +78,16 @@ document.body.addEventListener('keyup', (event) => {
 function playSound(sound) {
     let audioElement = new Audio(`assets/Media/sound/${sound}.wav`)
 
-    if(audioElement) {
-        audioElement.play() 
-    };
+    if (audioElement !== undefined) {
+        playPromise.then(function() {
+          // Automatic playback started!
+          audioElement.play()
+        }).catch(function(error) {
+          // Automatic playback failed.
+          // Show a UI element to let the user manually start playback.
+          console.log(error)
+        });
+      }
 
 
     switch(sound) {
