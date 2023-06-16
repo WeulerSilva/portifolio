@@ -23,52 +23,52 @@ document.body.addEventListener('keyup', (event) => {
         
         switch(event.code) {
             case 'KeyC':
-                playSound(event.code.toLowerCase())
+                playSound(event.code)
                 ride.classList.add('ride-animation')
                 removeClass(ride,'ride-animation')
                 break;
             case 'KeyE':
-                playSound(event.code.toLowerCase())
+                playSound(event.code)
                 crashThree.classList.add('crash-animation')
                 removeClass(crashThree,'crash-animation')
                 break;
             case 'KeyW':
-                playSound(event.code.toLowerCase())
+                playSound(event.code)
                 crashTwo.classList.add('crash-animation')
                 removeClass(crashTwo,'crash-animation')
                 break;
             case 'KeyQ':
-                playSound(event.code.toLowerCase())
+                playSound(event.code)
                 crash.classList.add('crash-animation')
                 removeClass(crash,'crash-animation')
                 break;
             case 'KeyA':
-                playSound(event.code.toLowerCase())
+                playSound(event.code)
                 hiHat.classList.add('hi-hat-animation')
                 removeClass(hiHat,'hi-hat-animation')
                 break;
             case 'KeyS': 
-                playSound(event.code.toLowerCase())
+                playSound(event.code)
                 tom.classList.add('tom-1-animation')
                 removeClass(tom,'tom-1-animation')
                 break;
             case 'KeyD': 
-                playSound(event.code.toLowerCase())
+                playSound(event.code)
                 tomTwo.classList.add('tom-2-animation')
                 removeClass(tomTwo,'tom-2-animation')
                 break;
             case 'KeyX':
-                playSound(event.code.toLowerCase())
+                playSound(event.code)
                 floor.classList.add('floor-animation')
                 removeClass(floor,'floor-animation')
                 break;
             case 'Space':
-                playSound(event.code.toLowerCase())
+                playSound(event.code)
                 pedal.classList.add('pedal-animation')
                 removeClass(pedal,'pedal-animation')
                 break;
             case 'KeyZ':
-                playSound(event.code.toLowerCase())
+                playSound(event.code)
                 break;
             };
         
@@ -76,8 +76,7 @@ document.body.addEventListener('keyup', (event) => {
 });
 
 function playSound(sound) {
-    const audioPath = `assets/Media/sound/${sound}.wav`;
-    let audioElement = new Audio(audioPath);
+    let audioElement = new Audio(`assets/Mediia/sound/${sound}.wav`)
 
     if(audioElement) {
         audioElement.play() 
@@ -85,39 +84,39 @@ function playSound(sound) {
 
 
     switch(sound) {
-        case 'Keyc':
+        case 'KeyC':
             ride.classList.add('ride-animation')
             removeClass(ride,'ride-animation')
             break;
-        case 'Keye':
+        case 'KeyE':
             crashThree.classList.add('crash-animation')
             removeClass(crashThree,'crash-animation')
             break;
-        case 'Keyw':
+        case 'KeyW':
             crashTwo.classList.add('crash-animation')
             removeClass(crashTwo,'crash-animation')
             break;
-        case 'Keyq':
+        case 'KeyQ':
             crash.classList.add('crash-animation')
             removeClass(crash,'crash-animation')
             break;
-        case 'Keya':
+        case 'KeyA':
             hiHat.classList.add('hi-hat-animation')
             removeClass(hiHat,'hi-hat-animation')
             break;
-        case 'Keys': 
+        case 'KeyS': 
         tom.classList.add('tom-1-animation')
         removeClass(tom,'tom-1-animation')
         break;
-        case 'Keyd': 
+        case 'KeyD': 
             tomTwo.classList.add('tom-2-animation')
             removeClass(tomTwo,'tom-2-animation')
             break;
-        case 'Keyx':
+        case 'KeyX':
             floor.classList.add('floor-animation')
             removeClass(floor,'floor-animation')
             break;
-        case 'space':
+        case 'Space':
             pedal.classList.add('pedal-animation')
             removeClass(pedal,'pedal-animation')
             break;
