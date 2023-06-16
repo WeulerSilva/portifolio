@@ -75,24 +75,12 @@ document.body.addEventListener('keyup', (event) => {
 
 });
 
-async function playSound(sound) {
-    try {
-      const audioPath = `assets/Media/sound/${sound}.wav`;
-      const response = await fetch(audioPath);
-      if (response.ok) {
-        const audioBuffer = await response.arrayBuffer();
-        const audioContext = new AudioContext();
-        const audioBufferSource = audioContext.createBufferSource();
-        const decodedAudioData = await audioContext.decodeAudioData(audioBuffer);
-        audioBufferSource.buffer = decodedAudioData;
-        audioBufferSource.connect(audioContext.destination);
-        audioBufferSource.start();
-      } else {
-        console.error('Failed to load audio file:', audioPath);
-      }
-    } catch (error) {
-      console.error('Error loading audio file:', error);
-    }
+function playSound(sound) {
+    let audioElement = new Audio(`assets/Media/sound/${sound}.wav`)
+
+    if(audioElement) {
+        audioElement.play() 
+    };
 
 
     switch(sound) {
@@ -137,7 +125,8 @@ async function playSound(sound) {
 
 
 //criando a mesma coisa so que usando o click ao inves dos botões
-const clicou = (key) => {
+const clicou = (event) => {
+    const key = event.currentTarget;
     playSound(key.getAttribute('data-key'))
 };
 
