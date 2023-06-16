@@ -18,56 +18,6 @@ function removeClass (nome,cl) {
     }, 500);
 }
 
-
-function playSound(sound) {
-    let audioElement = new Audio(`assets/Media/sound/${sound}.wav`)
-
-    if(audioElement) {
-        audioElement.play() 
-    };
-
-
-    switch(sound) {
-        case 'Keyc':
-            ride.classList.add('ride-animation')
-            removeClass(ride,'ride-animation')
-            break;
-        case 'Keye':
-            crashThree.classList.add('crash-animation')
-            removeClass(crashThree,'crash-animation')
-            break;
-        case 'Keyw':
-            crashTwo.classList.add('crash-animation')
-            removeClass(crashTwo,'crash-animation')
-            break;
-        case 'Keyq':
-            crash.classList.add('crash-animation')
-            removeClass(crash,'crash-animation')
-            break;
-        case 'Keya':
-            hiHat.classList.add('hi-hat-animation')
-            removeClass(hiHat,'hi-hat-animation')
-            break;
-        case 'Keys': 
-        tom.classList.add('tom-1-animation')
-        removeClass(tom,'tom-1-animation')
-        break;
-        case 'Keyd': 
-            tomTwo.classList.add('tom-2-animation')
-            removeClass(tomTwo,'tom-2-animation')
-            break;
-        case 'Keyx':
-            floor.classList.add('floor-animation')
-            removeClass(floor,'floor-animation')
-            break;
-        case 'space':
-            pedal.classList.add('pedal-animation')
-            removeClass(pedal,'pedal-animation')
-            break;
-        }
-};
-
-
 //adicionando os sons de bateria de acordo com o botão apertado
 document.body.addEventListener('keyup', (event) => {  
         
@@ -125,6 +75,65 @@ document.body.addEventListener('keyup', (event) => {
 
 });
 
+async function playSound(sound) {
+    try {
+      const audioPath = `assets/Media/sound/${sound}.wav`;
+      const response = await fetch(audioPath);
+      if (response.ok) {
+        const audioBuffer = await response.arrayBuffer();
+        const audioContext = new AudioContext();
+        const audioBufferSource = audioContext.createBufferSource();
+        const decodedAudioData = await audioContext.decodeAudioData(audioBuffer);
+        audioBufferSource.buffer = decodedAudioData;
+        audioBufferSource.connect(audioContext.destination);
+        audioBufferSource.start();
+      } else {
+        console.error('Failed to load audio file:', audioPath);
+      }
+    } catch (error) {
+      console.error('Error loading audio file:', error);
+    }
+
+
+    switch(sound) {
+        case 'Keyc':
+            ride.classList.add('ride-animation')
+            removeClass(ride,'ride-animation')
+            break;
+        case 'Keye':
+            crashThree.classList.add('crash-animation')
+            removeClass(crashThree,'crash-animation')
+            break;
+        case 'Keyw':
+            crashTwo.classList.add('crash-animation')
+            removeClass(crashTwo,'crash-animation')
+            break;
+        case 'Keyq':
+            crash.classList.add('crash-animation')
+            removeClass(crash,'crash-animation')
+            break;
+        case 'Keya':
+            hiHat.classList.add('hi-hat-animation')
+            removeClass(hiHat,'hi-hat-animation')
+            break;
+        case 'Keys': 
+        tom.classList.add('tom-1-animation')
+        removeClass(tom,'tom-1-animation')
+        break;
+        case 'Keyd': 
+            tomTwo.classList.add('tom-2-animation')
+            removeClass(tomTwo,'tom-2-animation')
+            break;
+        case 'Keyx':
+            floor.classList.add('floor-animation')
+            removeClass(floor,'floor-animation')
+            break;
+        case 'space':
+            pedal.classList.add('pedal-animation')
+            removeClass(pedal,'pedal-animation')
+            break;
+        }
+};
 
 
 //criando a mesma coisa so que usando o click ao inves dos botões
