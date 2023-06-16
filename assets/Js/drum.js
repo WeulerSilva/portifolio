@@ -76,7 +76,8 @@ document.body.addEventListener('keyup', (event) => {
 });
 
 function playSound(sound) {
-    let audioElement = new Audio(`assets/Media/sound/${sound}.wav`)
+    const audioPath = `assets/Media/sound/${sound}.wav`;
+    let audioElement = new Audio(audioPath);
 
     if(audioElement) {
         audioElement.play() 
@@ -125,8 +126,7 @@ function playSound(sound) {
 
 
 //criando a mesma coisa so que usando o click ao inves dos botões
-const clicou = (event) => {
-    const key = event.currentTarget;
+const clicou = (key) => {
     playSound(key.getAttribute('data-key'))
 };
 
