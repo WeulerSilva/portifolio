@@ -76,7 +76,7 @@ document.body.addEventListener('keyup', (event) => {
 });
 
 function playSound(sound) {
-    let audioElement = new Audio(`assets/Media/sound/${sound}.wav`)
+    let audioElement = new Audio(`assets/Media/sound/${sound}.mp3`)
 
     if(audioElement) {
         audioElement.play() 
