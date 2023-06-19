@@ -1,5 +1,6 @@
 const screen = document.querySelector('.calculator input');
 
+
 function insert (num) {
     document.querySelector('.calculator input').style.textAlign = 'left';
     screen.value = screen.value + num;
@@ -20,5 +21,11 @@ function calcular () {
         document.querySelector('.calculator input').style.textAlign = 'right';
         let resu = eval(resultado);
         screen.value = resu
+    }else {    
+        document.querySelector('.calculator input').value = 'Digite algo...';
+        document.querySelector('.calculator input').style.textAlign = 'left';
+        setTimeout(() => {
+            document.querySelector('.calculator input').value = '';
+        }, 1500);
     }
 }
