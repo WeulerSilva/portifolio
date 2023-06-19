@@ -1,15 +1,16 @@
-let hours = document.querySelector('.hours');
-let menu = document.querySelector('.menu');
-let firstScreen = document.querySelector('.first-screen');
-let secondScreen = document.querySelector('.second-screen');
-let homi = document.querySelector('.homi-img');
-let back = document.querySelector('.back-img');
-let weather = document.querySelector('.weather');
-let bottons = document.querySelector('.bottons');
-let camera = document.querySelector('.camera');
-let career = document.querySelector('.career');
-let github = document.querySelector('.github');
-let linkedin = document.querySelector('.linkedin');
+const hours = document.querySelector('.hours');
+const menu = document.querySelector('.menu');
+const firstScreen = document.querySelector('.first-screen');
+const secondScreen = document.querySelector('.second-screen');
+const homi = document.querySelector('.homi-img');
+const back = document.querySelector('.back-img');
+const weather = document.querySelector('.weather');
+const bottons = document.querySelector('.bottons');
+const camera = document.querySelector('.camera');
+const career = document.querySelector('.career');
+const github = document.querySelector('.github');
+const linkedin = document.querySelector('.linkedin');
+const calculator = document.querySelector('.calculator');
 
 //funções responsaveis pela hora
 
@@ -114,4 +115,12 @@ document.querySelector('.i-linkedin').addEventListener('click', () => {
     linkedin.classList.replace('none', 'flex');
     backMenu(linkedin);
     backHomi(linkedin);
+})
+
+//app calculator
+document.querySelector('.i-calculator').addEventListener('click', () => {
+    secondScreen.classList.replace('flex', 'none');
+    calculator.classList.replace('none', 'flex');
+    backMenu(calculator);
+    backHomi(calculator);
 })
