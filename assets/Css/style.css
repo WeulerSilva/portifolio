@@ -944,7 +944,12 @@ footer {
 }
 
 .about-name {
-    color: #5cd8bc;
+    
+}
+
+.about h5 {
+   color: #5cd8bc; 
+   font-size: 30px;
 }
 
 .about span {

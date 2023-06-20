@@ -44,22 +44,36 @@ setInterval(updateClock,60000);
 //Functions
 
 function botaoEng () {
-    console.log(currentAbout);
+    
     if(currentAbout == 0) {
         aboutH.innerHTML = '';
-        aboutH.innerHTML = 'Olá, Eu sou';
+        document.querySelector('.about h5').innerHTML = '';
+        document.querySelector('.about h5').innerHTML = 'Weuler Silva';
+        aboutH.innerHTML = 'Olá, Eu sou ';
         aboutP.innerHTML = '';
         aboutP.innerHTML = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, deleniti recusandae vitae commodi dolore quos reprehenderit blanditiis consectetur saepe fugiat, et, distinctio laudantium doloribus molestiae ad maxime eaque perferendis accusantium.';
     }else if(currentAbout == 1) {
-        aboutP.innerHTML = '';
-        aboutP.innerHTML = 'Preencher depois com varias palavras sem sentido para mudar,apenas para preencher o campo de arquivos etc.para depois mudar plavras que antes estaram aqui nesse campo.';
         aboutH.innerHTML = '';
         aboutH.innerHTML = 'Tenho que';
+        document.querySelector('.about h5').innerHTML = '';
+        document.querySelector('.about h5').innerHTML = 'Estudar';
+        aboutP.innerHTML = '';
+        aboutP.innerHTML = 'Preencher depois com varias palavras sem sentido para mudar,apenas para preencher o campo de arquivos etc.para depois mudar plavras que antes estaram aqui nesse campo.';
     }else if(currentAbout == 2) {
-        console.log('oi')
-    }    
-    
-}
+        aboutH.innerHTML = '';
+        aboutH.innerHTML = 'Mudei que';
+        document.querySelector('.about h5').innerHTML = '';
+        document.querySelector('.about h5').innerHTML = 'Praticar';
+        aboutP.innerHTML = '';
+        aboutP.innerHTML = 'Preencher depois com varias palavras sem sentido para mudar,apenas para preencher o campo de arquivos etc.para depois mudar plavras que antes estaram aqui nesse campo.';
+    }else if(currentAbout == 3) {
+        currentAbout = 0;
+        botaoEng();
+    }else if(currentAbout <= -1) {
+        currentAbout = 2;
+        botaoEng();
+    }
+};
 
 
 
@@ -69,7 +83,7 @@ function buttonBack () {
         secondScreen.classList.replace('flex', 'none');
         bottons.classList.replace('flex', 'none');
     }
-}
+};
 
 
 function backMenu (item) {
@@ -78,7 +92,7 @@ function backMenu (item) {
         item.classList.replace('flex', 'none');
         buttonBack();
     })
-}
+};
 
 function backHomi (item) {
     homi.addEventListener('click', () => {
@@ -87,7 +101,7 @@ function backHomi (item) {
         item.classList.replace('flex', 'none');
     })
 
-}
+};
 
 //botão ir para o menu
 menu.addEventListener('click',() => {
@@ -114,7 +128,7 @@ back.addEventListener('click', () => {
     camera.classList.remove('camera-img');
     currentBack --;
     buttonBack();
-})
+});
 
 //app de clima
 document.querySelector('.i-weather').addEventListener('click', () => {
@@ -124,7 +138,7 @@ document.querySelector('.i-weather').addEventListener('click', () => {
     backHomi(weather);
     currentBack ++;
     buttonBack();
-})
+});
 
 //app de camera
 document.querySelector('.i-camera').addEventListener('click', () => {
@@ -134,16 +148,17 @@ document.querySelector('.i-camera').addEventListener('click', () => {
     backMenu(camera);
     backHomi(camera);
     currentBack++;
-})
+});
 
 document.querySelector('.camera-front').addEventListener('click',() => {
     camera.classList.add('camera-img');
-})
+});
 
 //app de sobre min
 document.querySelector('.i-carrer').addEventListener('click', () => {
     secondScreen.classList.replace('flex', 'none');
     about.classList.replace('none', 'flex');
+    botaoEng();
     backMenu(about);
     backHomi(about);
     currentBack++;
@@ -157,7 +172,7 @@ document.querySelector('.about-prev').addEventListener('click', () => {
 document.querySelector('.about-next').addEventListener('click', () => {
     currentAbout++;
     botaoEng();
-})
+});
 
 //app github
 document.querySelector('.i-github').addEventListener('click', () => {
@@ -166,7 +181,7 @@ document.querySelector('.i-github').addEventListener('click', () => {
     backMenu(github);
     backHomi(github);
     currentBack++;
-})
+});
 
 //app lindekin
 document.querySelector('.i-linkedin').addEventListener('click', () => {
@@ -175,7 +190,7 @@ document.querySelector('.i-linkedin').addEventListener('click', () => {
     backMenu(linkedin);
     backHomi(linkedin);
     currentBack++;
-})
+});
 
 //app calculator
 document.querySelector('.i-calculator').addEventListener('click', () => {
@@ -184,5 +199,4 @@ document.querySelector('.i-calculator').addEventListener('click', () => {
     backMenu(calculator);
     backHomi(calculator);
     currentBack++;
-})
-
+});
