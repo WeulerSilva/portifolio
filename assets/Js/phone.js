@@ -167,13 +167,11 @@ document.querySelector('.i-carrer').addEventListener('click', () => {
 document.querySelector('.about-prev').addEventListener('click', () => {
     botaoEng();
     currentAbout--;
-    botaoEng();
 });
 
 document.querySelector('.about-next').addEventListener('click', () => {
     botaoEng();
     currentAbout++;
-    botaoEng();
 });
 
 //app github
