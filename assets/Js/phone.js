@@ -7,11 +7,16 @@ const back = document.querySelector('.back-img');
 const weather = document.querySelector('.weather');
 const bottons = document.querySelector('.bottons');
 const camera = document.querySelector('.camera');
-const career = document.querySelector('.career');
+const about = document.querySelector('.about');
+const aboutP = document.querySelector('.about p');
+const aboutH = document.querySelector('.about h1');
+const aboutN = document.querySelector('.about-name');
 const github = document.querySelector('.github');
 const linkedin = document.querySelector('.linkedin');
 const calculator = document.querySelector('.calculator');
 let currentBack = 0;
+let currentAbout = 0;
+
 
 //funções responsaveis pela hora
 
@@ -35,6 +40,28 @@ function fixZero(time) {
 updateClock();
 
 setInterval(updateClock,60000);
+
+//Functions
+
+function botaoEng () {
+    console.log(currentAbout);
+    if(currentAbout == 0) {
+        aboutH.innerHTML = '';
+        aboutH.innerHTML = 'Olá, Eu sou';
+        aboutP.innerHTML = '';
+        aboutP.innerHTML = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, deleniti recusandae vitae commodi dolore quos reprehenderit blanditiis consectetur saepe fugiat, et, distinctio laudantium doloribus molestiae ad maxime eaque perferendis accusantium.';
+    }else if(currentAbout == 1) {
+        aboutP.innerHTML = '';
+        aboutP.innerHTML = 'Preencher depois com varias palavras sem sentido para mudar,apenas para preencher o campo de arquivos etc.para depois mudar plavras que antes estaram aqui nesse campo.';
+        aboutH.innerHTML = '';
+        aboutH.innerHTML = 'Tenho que';
+    }else if(currentAbout == 2) {
+        console.log('oi')
+    }    
+    
+}
+
+
 
 function buttonBack () {
     if(currentBack <= 0) {
@@ -113,14 +140,24 @@ document.querySelector('.camera-front').addEventListener('click',() => {
     camera.classList.add('camera-img');
 })
 
-//app de carreira
+//app de sobre min
 document.querySelector('.i-carrer').addEventListener('click', () => {
     secondScreen.classList.replace('flex', 'none');
-    career.classList.replace('none', 'flex');
-    backMenu(career);
-    backHomi(career);
+    about.classList.replace('none', 'flex');
+    backMenu(about);
+    backHomi(about);
     currentBack++;
 });
+
+document.querySelector('.about-prev').addEventListener('click', () => {
+    currentAbout--;
+    botaoEng();
+});
+
+document.querySelector('.about-next').addEventListener('click', () => {
+    currentAbout++;
+    botaoEng();
+})
 
 //app github
 document.querySelector('.i-github').addEventListener('click', () => {
