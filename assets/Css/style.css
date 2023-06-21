@@ -943,10 +943,6 @@ footer {
     font-size: 32px;
 }
 
-.about-name {
-    
-}
-
 .about h5 {
    color: #5cd8bc; 
    font-size: 30px;
@@ -1227,6 +1223,13 @@ footer {
     left: 34px;
     border-radius: 12px;
     transition: all 1s ease-in-out;
+}
+
+.calculator h1 {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    padding-top: 10px;
 }
 
 table {
