@@ -14,6 +14,7 @@ const aboutN = document.querySelector('.about-name');
 const github = document.querySelector('.github');
 const linkedin = document.querySelector('.linkedin');
 const calculator = document.querySelector('.calculator');
+const memory = document.querySelector('.memory');
 let currentBack = 0;
 let currentAbout = 0;
 
@@ -198,5 +199,14 @@ document.querySelector('.i-calculator').addEventListener('click', () => {
     calculator.classList.replace('none', 'flex');
     backMenu(calculator);
     backHomi(calculator);
+    currentBack++;
+});
+
+//app Memory
+document.querySelector('.i-memory').addEventListener('click', () => {
+    secondScreen.classList.replace('flex', 'none');
+    memory.classList.replace('none', 'flex');
+    backMenu(memory);
+    backHomi(memory);
     currentBack++;
 });

@@ -1306,3 +1306,18 @@ table {
     border-bottom:5px solid rgba(143, 35, 22, 0.2);
     border-right: none;
 }
+
+/*app jogo da memoria*/
+.memory {
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 218px;
+    height: 464px;
+    background-color: goldenrod;
+    bottom: 489px;
+    left: 34px;
+    border-radius: 12px;
+    transition: all 1s ease-in-out;  
+}
