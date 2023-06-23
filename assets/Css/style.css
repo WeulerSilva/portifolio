@@ -1319,5 +1319,50 @@ table {
     bottom: 489px;
     left: 34px;
     border-radius: 12px;
-    transition: all 1s ease-in-out;  
+    transition: all 1s ease-in-out;
+}
+
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 7px;
+    width: 100%;
+    max-width: 200px;
+    background-color: #0d1117;
+    margin: 0 auto;
+    margin-top: 90px;
+}
+
+.memory-card {
+    aspect-ratio: 3/4;
+    width: 100%;
+    background-color: #333;
+    position: relative;
+    transition: all 400ms ease;
+    transform-style: preserve-3d;
+    z-index: 2;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.reveal-card {
+    transform: rotateY(180deg);
+}
+
+
+/*mudar posteiormente o cback sera a parte da frente da carta e o front a que sera escondida*/
+.front {
+}
+
+.cback {
+    background-image: url(../Media/phone/tela.png);
+    background-size: cover;
+    background-position: center;
+    backface-visibility: hidden;
 }
