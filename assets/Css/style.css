@@ -1315,11 +1315,23 @@ table {
     position: relative;
     width: 218px;
     height: 464px;
-    background-color: goldenrod;
+    background-color: white;
     bottom: 489px;
     left: 34px;
     border-radius: 12px;
     transition: all 1s ease-in-out;
+}
+
+.memory h1 {
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+    padding-top: 5px;
+}
+
+.memory p {
+    color: red;
+    padding:5px 0px 0px 135px;
 }
 
 .memory-grid {
@@ -1330,7 +1342,7 @@ table {
     max-width: 200px;
     background-color: #0d1117;
     margin: 0 auto;
-    margin-top: 90px;
+    margin-top: 40px;
 }
 
 .memory-card {
@@ -1355,6 +1367,9 @@ table {
     transform: rotateY(180deg);
 }
 
+.disable-card {
+    opacity: 0.5;
+}
 
 /*mudar posteiormente o cback sera a parte da frente da carta e o front a que sera escondida*/
 .front {
