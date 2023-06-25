@@ -1,5 +1,6 @@
 const grid = document.querySelector('.memory-grid');
 const memoryLife = document.querySelector('.memory p');
+const memoryText = document.querySelector('.memory h1');
 const memoryWin = document.querySelector('.memory-win');
 const memoryLose = document.querySelector('.memory-lose');
 
@@ -28,7 +29,7 @@ let firstCard = '';
 let secondCard = '';
 let currentLife = 25;
 let currentWin = 0;
-let currentLose = 0; 
+let currentLose = 0;
 
 function resetGame () {
     const classCard = document.querySelectorAll('.memory-grid .memory-card');
@@ -45,12 +46,24 @@ function youWin () {
     currentWin++;
     memoryWin.innerHTML = '';
     memoryWin.innerHTML = `V: ${currentWin}`;
+    memoryText.innerHTML = '';
+    memoryText.innerHTML = 'Você Ganhou!';
+    setTimeout(()=>{
+        memoryText.innerHTML = '';
+        memoryText.innerHTML = 'Jogo da Memória';
+    },5000);
 };
 
 function youLose () {
     currentLose++;
     memoryLose.innerHTML = '';
     memoryLose.innerHTML = `D: ${currentLose}`;
+    memoryText.innerHTML = '';
+    memoryText.innerHTML = 'Você Perdeu!';
+    setTimeout(()=>{
+        memoryText.innerHTML = '';
+        memoryText.innerHTML = 'Jogo da Memória';
+    },5000);
 }
 
 document.querySelector('.memory-restart').addEventListener('click', () => {
@@ -69,7 +82,6 @@ const checkEndGame = () => {
     const disableCards = document.querySelectorAll('.disable-card');
 
     if(disableCards.length === 20) {
-        alert('parabens, Você conseguiu!');
         youWin();
     }
 }
@@ -77,9 +89,6 @@ const checkEndGame = () => {
 function checkLife() {
     if(currentLife === 0) {
         memoryLife.innerHTML = 'Vidas: 0';
-        setTimeout(() => {
-            alert('Você perdeu!');
-        },600);
         resetGame();
         youLose();
     }else {
