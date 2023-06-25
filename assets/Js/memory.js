@@ -1,6 +1,8 @@
 const grid = document.querySelector('.memory-grid');
 const memoryLife = document.querySelector('.memory p');
-const classCard = document.querySelectorAll('.memory-card');
+const memoryWin = document.querySelector('.memory-win');
+const memoryLose = document.querySelector('.memory-lose');
+
 
 
 const colors = [
@@ -24,18 +26,51 @@ const creatElement = (tag, className) => {
 
 let firstCard = '';
 let secondCard = '';
-let currentLife = 2;
+let currentLife = 25;
+let currentWin = 0;
+let currentLose = 0; 
 
 function resetGame () {
-    classCard.remove();
+    const classCard = document.querySelectorAll('.memory-grid .memory-card');
+        classCard.forEach((item)=>{
+            item.remove();
+        });
+    loadGame();
+    memoryLife.innerHTML = 'Vidas: 25';
+    currentLife = '';
+    currentLife = 25;
 };
 
+function youWin () {
+    currentWin++;
+    memoryWin.innerHTML = '';
+    memoryWin.innerHTML = `V: ${currentWin}`;
+};
+
+function youLose () {
+    currentLose++;
+    memoryLose.innerHTML = '';
+    memoryLose.innerHTML = `D: ${currentLose}`;
+}
+
+document.querySelector('.memory-restart').addEventListener('click', () => {
+    console.log('oi');
+    const classCard = document.querySelectorAll('.memory-grid .memory-card');
+        classCard.forEach((item)=>{
+            item.remove();
+        });
+        loadGame();
+        memoryLife.innerHTML = 'Vidas: 25';
+        currentLife = '';
+        currentLife = 25;
+});
 
 const checkEndGame = () => {
     const disableCards = document.querySelectorAll('.disable-card');
 
     if(disableCards.length === 20) {
         alert('parabens, Você conseguiu!');
+        youWin();
     }
 }
 
@@ -46,6 +81,7 @@ function checkLife() {
             alert('Você perdeu!');
         },600);
         resetGame();
+        youLose();
     }else {
         memoryLife.innerHTML = '';
         memoryLife.innerHTML = `Vidas: ${currentLife}`;
