@@ -157,4 +157,4 @@ const loadGame = () => {
     })
 }
 
-loadGame()
+loadGame();
