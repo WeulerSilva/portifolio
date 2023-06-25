@@ -27,7 +27,7 @@ const creatElement = (tag, className) => {
 
 let firstCard = '';
 let secondCard = '';
-let currentLife = 25;
+let currentLife = 18;
 let currentWin = 0;
 let currentLose = 0;
 
@@ -37,9 +37,9 @@ function resetGame () {
             item.remove();
         });
     loadGame();
-    memoryLife.innerHTML = 'Vidas: 25';
+    memoryLife.innerHTML = 'Vidas: 18';
     currentLife = '';
-    currentLife = 25;
+    currentLife = 18;
 };
 
 function youWin () {
@@ -66,22 +66,13 @@ function youLose () {
     },5000);
 }
 
-document.querySelector('.memory-restart').addEventListener('click', () => {
-    console.log('oi');
-    const classCard = document.querySelectorAll('.memory-grid .memory-card');
-        classCard.forEach((item)=>{
-            item.remove();
-        });
-        loadGame();
-        memoryLife.innerHTML = 'Vidas: 25';
-        currentLife = '';
-        currentLife = 25;
-});
-
 const checkEndGame = () => {
     const disableCards = document.querySelectorAll('.disable-card');
 
     if(disableCards.length === 20) {
+        setTimeout(()=>{
+          resetGame();  
+        },2000)
         youWin();
     }
 }
@@ -89,7 +80,9 @@ const checkEndGame = () => {
 function checkLife() {
     if(currentLife === 0) {
         memoryLife.innerHTML = 'Vidas: 0';
-        resetGame();
+        setTimeout(()=>{
+           resetGame(); 
+        },2000)
         youLose();
     }else {
         memoryLife.innerHTML = '';
