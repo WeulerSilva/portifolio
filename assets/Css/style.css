@@ -1356,7 +1356,8 @@ table {
 .memory-grid {
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    border-radius: 5px;
+    border: 2px solid black;
+    border-radius: 3px;
     gap: 7px;
     width: 100%;
     max-width: 200px;
