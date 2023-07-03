@@ -15,6 +15,7 @@ const github = document.querySelector('.github');
 const linkedin = document.querySelector('.linkedin');
 const calculator = document.querySelector('.calculator');
 const memory = document.querySelector('.memory');
+const internet = document.querySelector('.internet');
 let currentBack = 0;
 let currentAbout = 0;
 
@@ -210,3 +211,12 @@ document.querySelector('.i-memory').addEventListener('click', () => {
     backHomi(memory);
     currentBack++;
 });
+
+//app internet
+document.querySelector('.i-internet').addEventListener('click', () => {
+    secondScreen.classList.replace('flex', 'none');
+    internet.classList.replace('none', 'flex');
+    backMenu(internet);
+    backHomi(internet);
+    currentBack++;
+})

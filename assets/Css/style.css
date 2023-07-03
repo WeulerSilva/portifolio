@@ -1376,8 +1376,6 @@ table {
     cursor: pointer;
 }
 
-
-
 .card {
     width: 100%;
     height: 100%;
@@ -1395,12 +1393,24 @@ table {
 }
 
 /*mudar posteiormente o cback sera a parte da frente da carta e o front a que sera escondida*/
-.front {
-}
-
 .cback {
     background-image: url(../Media/phone/tela.png);
     background-size: cover;
     background-position: center;
     backface-visibility: hidden;
+}
+
+/*app internet*/
+.internet {
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 218px;
+    height: 464px;
+    background-color: blueviolet;
+    bottom: 489px;
+    left: 34px;
+    border-radius: 12px;
+    transition: all 1s ease-in-out;
 }
