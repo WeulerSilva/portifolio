@@ -102,7 +102,6 @@ function backHomi (item) {
         secondScreen.classList.replace('flex', 'none');
         item.classList.replace('flex', 'none');
     })
-
 };
 
 //botão ir para o menu
