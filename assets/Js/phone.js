@@ -16,8 +16,10 @@ const linkedin = document.querySelector('.linkedin');
 const calculator = document.querySelector('.calculator');
 const memory = document.querySelector('.memory');
 const internet = document.querySelector('.internet');
+let loadScript = false;
 let currentBack = 0;
 let currentAbout = 0;
+let currentWeb = 0;
 
 
 //funções responsaveis pela hora
@@ -103,6 +105,15 @@ function backHomi (item) {
         item.classList.replace('flex', 'none');
     })
 };
+
+function loadApp (codigo) {
+    if (!loadScript) {
+        const script = document.createElement('script');
+        script.src = `assets/Js/${codigo}.js`;
+        document.body.appendChild(script);
+        loadScript = true;
+    };
+}
 
 //botão ir para o menu
 menu.addEventListener('click',() => {
@@ -215,7 +226,10 @@ document.querySelector('.i-memory').addEventListener('click', () => {
 document.querySelector('.i-internet').addEventListener('click', () => {
     secondScreen.classList.replace('flex', 'none');
     internet.classList.replace('none', 'flex');
+
+    loadApp('internet');
     backMenu(internet);
     backHomi(internet);
     currentBack++;
+    currentWeb = 1;
 })

@@ -1,15 +1,17 @@
+console.log(currentWeb)
 const objectWebOne = {
     metallica : {
-        h1: 'Metallica',
+        a: 'METALLICA: Um site feito de fã para fã!',
         p: 'Site feito para fãs descobrirem e saberem curiosidades sobre a banda e seus membros.',
-        photo: '../Media/phone/cachorro.gif'},
+        photo: 'cachorro.gif'},
     aleatorio: {
-        h1: 'site ale',
+        a: 'site ale',
         p: 'esse site foi feito aleatoriamente e blablabla',
-        photo: '../Media/phone/cachorro.gif'
+        photo: '../Media/phone/cachorro.gif',
+        link: 'https://github.com/WeulerSilva/portifolio/settings/pages'
     },
     aleatorio2: {
-        h1: 'Bem aleatorio',
+        a: 'Bem aleatorio',
         p: 'esse site e mais aleatorio ainda pq eu sei fazer nada blablabla'
     }
 }
@@ -23,29 +25,30 @@ const creatElem = (tag, className) => {
     return element;
 }
 
-function getObjectH(h1) {
-    return objectWeb+h1
-}
-
-function creatSite (p,photo) {
+function creatSite (objName) {
 
     const interSite = creatElem('div','inter-body-site');
     const interContent = creatElem('div', 'inter-body-content');
     const interPhoto = creatElem('div', 'inter-body-photo');
 
-    const hOne = document.createElement('h1');
-    hOne.innerHTML = objectWebOne.metallica.h1;
+    const a = document.createElement('a');
+    a.setAttribute('href', 'https://github.com/WeulerSilva/portifolio/settings/pages')
+    a.innerHTML = objName.a;
     const pEl = document.createElement('p');
-    pEl.innerHTML = p;
-    interPhoto.style.backgroundImage = 'url(../Media/phone/cachorro.gif)';
-
-    interContent.appendChild(hOne);
+    pEl.innerHTML = objName.p;
+    const img = document.createElement('img');
+    img.setAttribute('src', `./assets/Media/phone/${objName.photo}`);
+    
+    interPhoto.appendChild(img);
+    interContent.appendChild(a);
     interContent.appendChild(pEl);
 
     interSite.appendChild(interContent);
-    interContent.appendChild(interPhoto);
+    interSite.appendChild(interPhoto);
 
     interBody.appendChild(interSite);
 }
 
-creatSite(objectWebOne.metallica.p,'cachorro.gif')
+if(currentWeb === 1) {
+    creatSite(objectWebOne.metallica)
+}
