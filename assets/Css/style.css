@@ -1475,6 +1475,8 @@ table {
 
 .inter-body-photo {
     display: flex;
+    background-position: center;
+    background-size: cover;
     width: 20%;
     height: 30px;
     background-color: red;

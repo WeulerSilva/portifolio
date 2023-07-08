@@ -1,3 +1,5 @@
+
+
 const grid = document.querySelector('.memory-grid');
 const memoryLife = document.querySelector('.memory p');
 const memoryText = document.querySelector('.memory h1');
