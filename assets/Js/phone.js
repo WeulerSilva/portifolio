@@ -18,6 +18,8 @@ const memory = document.querySelector('.memory');
 const internet = document.querySelector('.internet');
 let loadedScriptInternet = false;
 let loadedScriptMemory = false;
+let loadedScriptWeather = false;
+let loadedScriptCalc = false;
 let currentBack = 0;
 let currentAbout = 0;
 let currentWeb = 0;
@@ -148,6 +150,7 @@ back.addEventListener('click', () => {
 document.querySelector('.i-weather').addEventListener('click', () => {
     secondScreen.classList.replace('flex', 'none');
     weather.classList.replace('none', 'flex');
+    loadedScriptWeather = loadApp(loadedScriptWeather, 'weather');
     backMenu(weather);
     backHomi(weather);
     currentBack ++;
@@ -210,6 +213,7 @@ document.querySelector('.i-linkedin').addEventListener('click', () => {
 document.querySelector('.i-calculator').addEventListener('click', () => {
     secondScreen.classList.replace('flex', 'none');
     calculator.classList.replace('none', 'flex');
+    loadedScriptCalc = loadApp(loadedScriptCalc, 'calc');
     backMenu(calculator);
     backHomi(calculator);
     currentBack++;

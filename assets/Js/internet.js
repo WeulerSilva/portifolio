@@ -1,4 +1,3 @@
-console.log(currentWeb)
 const objectWebOne = {
     metallica : {
         a: 'METALLICA: Um site feito de fã para fã!',
@@ -51,4 +50,6 @@ function creatSite (objName) {
 
 if(currentWeb === 1) {
     creatSite(objectWebOne.metallica)
+}else if(currentWeb === 2) {
+
 }
