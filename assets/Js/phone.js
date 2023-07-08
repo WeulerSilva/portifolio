@@ -16,7 +16,8 @@ const linkedin = document.querySelector('.linkedin');
 const calculator = document.querySelector('.calculator');
 const memory = document.querySelector('.memory');
 const internet = document.querySelector('.internet');
-let loadScript = false;
+let loadedScriptInternet = false;
+let loadedScriptMemory = false;
 let currentBack = 0;
 let currentAbout = 0;
 let currentWeb = 0;
@@ -106,13 +107,14 @@ function backHomi (item) {
     })
 };
 
-function loadApp (codigo) {
-    if (!loadScript) {
+function loadApp (variable,codigo) {
+    if (!variable) {
         const script = document.createElement('script');
         script.src = `assets/Js/${codigo}.js`;
         document.body.appendChild(script);
-        loadScript = true;
+        variable = true;
     };
+    return variable
 }
 
 //botão ir para o menu
@@ -217,6 +219,7 @@ document.querySelector('.i-calculator').addEventListener('click', () => {
 document.querySelector('.i-memory').addEventListener('click', () => {
     secondScreen.classList.replace('flex', 'none');
     memory.classList.replace('none', 'flex');
+    loadedScriptMemory = loadApp(loadedScriptMemory, 'memory');
     backMenu(memory);
     backHomi(memory);
     currentBack++;
@@ -226,8 +229,7 @@ document.querySelector('.i-memory').addEventListener('click', () => {
 document.querySelector('.i-internet').addEventListener('click', () => {
     secondScreen.classList.replace('flex', 'none');
     internet.classList.replace('none', 'flex');
-
-    loadApp('internet');
+    loadedScriptInternet = loadApp(loadedScriptInternet, 'internet');
     backMenu(internet);
     backHomi(internet);
     currentBack++;
