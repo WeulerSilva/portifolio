@@ -34,7 +34,7 @@ const objectWebTwo = {
         photo: 'cachorro.gif'},
 };
 
-const objectThree = {
+const objectWebThree = {
     aleatorio6 : {
         a: 'GHOST: Um site feito de fã para fã!',
         p: 'Site feito para fãs descobrirem e saberem curiosidades sobre a banda e seus membros.',
