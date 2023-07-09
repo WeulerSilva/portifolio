@@ -1475,16 +1475,14 @@ table {
 
 .inter-body-content p {
     font-size: 14px;
-    background-color: white;
     width: 215px;
     padding: 0px 3px;
     text-size-adjust: auto;
 }
 
 .inter-body-photo {
-    display: flex;
-    
-    width: 20%;
+    display: flex;  
+    width: 17%;
     height: 30px;
     background-color: red;
     border-radius: 3px;
@@ -1496,7 +1494,37 @@ table {
 }
 
 .inter-footer {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: 30%;
     background-color: #0d1117;
+}
+
+.inter-footer-bar {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.inter-footer-name {
+    display: flex;
+    padding: 0px 2px 0px;
+    font-size: 40px;
+}
+
+.inter-footer-number {
+    display: flex;
+    padding: 0px 5px 0px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.inter-footer-number:hover {
+    color: red;
+}
+
+.active {
+    color: red;
 }

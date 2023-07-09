@@ -22,7 +22,7 @@ let loadedScriptWeather = false;
 let loadedScriptCalc = false;
 let currentBack = 0;
 let currentAbout = 0;
-let currentWeb = 0;
+let currentWeb;
 
 
 //funções responsaveis pela hora
@@ -237,5 +237,4 @@ document.querySelector('.i-internet').addEventListener('click', () => {
     backMenu(internet);
     backHomi(internet);
     currentBack++;
-    currentWeb = 1;
 })

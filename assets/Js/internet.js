@@ -1,3 +1,5 @@
+currentWeb = 1;
+
 const objectWebOne = {
     metallica : {
         a: 'METALLICA: Um site feito de fã para fã!',
@@ -6,17 +8,51 @@ const objectWebOne = {
     aleatorio: {
         a: 'site ale',
         p: 'esse site foi feito aleatoriamente e blablabla',
-        photo: '../Media/phone/cachorro.gif',
+        photo: 'cachorro.gif',
         link: 'https://github.com/WeulerSilva/portifolio/settings/pages'
     },
     aleatorio2: {
         a: 'Bem aleatorio',
-        p: 'esse site e mais aleatorio ainda pq eu sei fazer nada blablabla'
-    }
+        p: 'esse site e mais aleatorio ainda pq eu sei fazer nada blablabla',
+        photo: 'cachorro.gif'},
+};
+
+const objectWebTwo = {
+    aleatorio3 : {
+        a: 'AC/DC: Um site feito de fã para fã!',
+        p: 'Site feito para fãs descobrirem e saberem curiosidades sobre a banda e seus membros.',
+        photo: 'cachorro.gif'},
+    aleatorio4 : {
+        a: 'IRON MAIDEN',
+        p: 'esse site foi feito aleatoriamente e blablabla',
+        photo: 'cachorro.gif',
+        link: 'https://github.com/WeulerSilva/portifolio/settings/pages'
+    },
+    aleatorio5 : {
+        a: 'SLIPKNOT',
+        p: 'esse site e mais aleatorio ainda pq eu sei fazer nada blablabla',
+        photo: 'cachorro.gif'},
+};
+
+const objectThree = {
+    aleatorio6 : {
+        a: 'GHOST: Um site feito de fã para fã!',
+        p: 'Site feito para fãs descobrirem e saberem curiosidades sobre a banda e seus membros.',
+        photo: 'cachorro.gif'},
+    aleatorio7 : {
+        a: 'DISTURBED',
+        p: 'esse site foi feito aleatoriamente e blablabla',
+        photo: 'cachorro.gif',
+        link: 'https://github.com/WeulerSilva/portifolio/settings/pages'
+    },
+    aleatorio8 : {
+        a: 'GREEN DAY',
+        p: 'esse site e mais aleatorio ainda pq eu sei fazer nada blablabla',
+        photo: 'cachorro.gif'},
 }
 
 const interBody = document.querySelector('.inter-body');
-
+const interSite = document.querySelectorAll('.inter-body-site');
 
 const creatElem = (tag, className) => {
     const element = document.createElement(tag);
@@ -44,12 +80,44 @@ function creatSite (objName) {
 
     interSite.appendChild(interContent);
     interSite.appendChild(interPhoto);
-
     interBody.appendChild(interSite);
 }
 
 if(currentWeb === 1) {
-    creatSite(objectWebOne.metallica)
-}else if(currentWeb === 2) {
-
+    for(let key in objectWebOne) {
+        creatSite(objectWebOne[key]);
+    };
 }
+
+
+const footNumber = document.querySelectorAll('.inter-footer-number');
+    footNumber.forEach((event) => {
+        event.addEventListener('click', (e) => {
+            console.log(e.target.getAttribute('data-web'));
+            const barTarget = +e.target.getAttribute('data-web');
+            e.target.classList.remove('active');
+
+            if(barTarget === 1) {
+                e.target.classList.add('active');
+                console.log('e ummmmmm');
+                interBody.innerHTML = '';
+                for(let key in objectWebOne) {
+                    creatSite(objectWebOne[key]);
+                };
+            }else if(barTarget === 2) {
+                e.target.classList.add('active');
+                console.log('e doiiiiiiss');
+                interBody.innerHTML = '';
+                for(let key in objectWebTwo) {
+                    creatSite(objectWebTwo[key]);
+                };
+            }else if(barTarget === 3) {
+                e.target.classList.add('active');
+                console.log('e treeeeess');
+                interBody.innerHTML = '';
+                for(let key in objectWebThree) {
+                    creatSite(objectWebThree[key]);
+                };
+            }
+        }
+)})
