@@ -16,6 +16,8 @@ const linkedin = document.querySelector('.linkedin');
 const calculator = document.querySelector('.calculator');
 const memory = document.querySelector('.memory');
 const internet = document.querySelector('.internet');
+const quiz = document.querySelector('.quiz');
+let loadedScriptQuiz = false;
 let loadedScriptInternet = false;
 let loadedScriptMemory = false;
 let loadedScriptWeather = false;
@@ -236,5 +238,15 @@ document.querySelector('.i-internet').addEventListener('click', () => {
     loadedScriptInternet = loadApp(loadedScriptInternet, 'internet');
     backMenu(internet);
     backHomi(internet);
+    currentBack++;
+});
+
+//app Quiz
+document.querySelector('.i-quiz').addEventListener('click', () => {
+    secondScreen.classList.replace('flex', 'none');
+    quiz.classList.replace('none', 'flex');
+    loadedScriptQuiz = loadApp(loadedScriptQuiz, 'quiz');
+    backMenu(quiz);
+    backHomi(quiz);
     currentBack++;
 })
