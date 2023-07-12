@@ -1536,7 +1536,8 @@ table {
     position: relative;
     width: 218px;
     height: 464px;
-    background-color: white;
+    background-color: darkorange;
+    color: blue;
     bottom: 489px;
     left: 34px;
     border-radius: 12px;
@@ -1567,6 +1568,7 @@ table {
 }
 
 .options {
+    width: 207px;
     z-index: 2;
     cursor: pointer;
 }
@@ -1575,4 +1577,27 @@ table {
     position: relative;
     z-index: 2;
     cursor: pointer;
+}
+
+.question {
+    background-color: rgb(46, 46, 179);
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+}
+
+.option {
+    background-color: darkblue;
+    color: #00FF00;
+    margin-top: 10px;
+    font-size: 25px;
+    transition: 0.5s;
+}
+
+.option:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+.option span {
+    background-color: rgb(46, 46, 179);
+    color: white;
 }
