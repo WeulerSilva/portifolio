@@ -17,6 +17,7 @@ const calculator = document.querySelector('.calculator');
 const memory = document.querySelector('.memory');
 const internet = document.querySelector('.internet');
 const quiz = document.querySelector('.quiz');
+const contact = document.querySelector('.contact');
 let loadedScriptQuiz = false;
 let loadedScriptInternet = false;
 let loadedScriptMemory = false;
@@ -119,6 +120,18 @@ function loadApp (variable,codigo) {
         variable = true;
     };
     return variable
+}
+
+function copieText(idElement) {
+    let texto = document.querySelector(`#${idElement}`).value;
+
+    navigator.clipboard.writeText(texto)
+        .then(function() {
+            alert("Texto copiado: " + texto);
+        })
+        .catch(function(error) {
+            console.error("Erro ao copiar texto: ", error);
+        });
 }
 
 //botão ir para o menu
@@ -248,5 +261,15 @@ document.querySelector('.i-quiz').addEventListener('click', () => {
     loadedScriptQuiz = loadApp(loadedScriptQuiz, 'quiz');
     backMenu(quiz);
     backHomi(quiz);
+    currentBack++;
+})
+
+//app contact 
+document.querySelector('.i-contact').addEventListener('click', () => {
+    secondScreen.classList.replace('flex', 'none');
+    contact.classList.replace('none', 'flex');
+    //loadedScriptQuiz = loadApp(loadedScriptQuiz, 'quiz');
+    backMenu(contact);
+    backHomi(contact);
     currentBack++;
 })
