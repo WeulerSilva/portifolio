@@ -23,6 +23,7 @@ let loadedScriptInternet = false;
 let loadedScriptMemory = false;
 let loadedScriptWeather = false;
 let loadedScriptCalc = false;
+let loadedScriptContact = false;
 let currentBack = 0;
 let currentAbout = 0;
 let currentWeb;
@@ -122,27 +123,9 @@ function loadApp (variable,codigo) {
     return variable
 }
 
-function copieText(idElement) {
-    let texto = document.querySelector(`#${idElement}`).value;
 
-    navigator.clipboard.writeText(texto)
-        .then(function() {
-            alert("Texto copiado: " + texto);
-        })
-        .catch(function(error) {
-            console.error("Erro ao copiar texto: ", error);
-        });
-}
 
-function downloadPdf() {
-    var link = document.createElement('a');
 
-    link.download = 'curiculo.pdf';
-
-    link.href = 'assets/Media/cw/curiculo(falso).pdf';
-
-    link.click();
-}
 
 //botão ir para o menu
 menu.addEventListener('click',() => {
@@ -278,7 +261,7 @@ document.querySelector('.i-quiz').addEventListener('click', () => {
 document.querySelector('.i-contact').addEventListener('click', () => {
     secondScreen.classList.replace('flex', 'none');
     contact.classList.replace('none', 'flex');
-    //loadedScriptQuiz = loadApp(loadedScriptQuiz, 'quiz');
+    loadedScriptContact = loadApp(loadedScriptContact, 'contact');
     backMenu(contact);
     backHomi(contact);
     currentBack++;
