@@ -134,6 +134,16 @@ function copieText(idElement) {
         });
 }
 
+function downloadPdf() {
+    var link = document.createElement('a');
+
+    link.download = 'curiculo.pdf';
+
+    link.href = 'assets/Media/cw/curiculo(falso).pdf';
+
+    link.click();
+}
+
 //botão ir para o menu
 menu.addEventListener('click',() => {
     firstScreen.classList.replace('flex', 'none');

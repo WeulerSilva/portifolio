@@ -287,27 +287,50 @@
                     </div>
 
                     <div class="contact none">
-                        <h1>Contatos</h1>
-                        <div class="my-contact">
-                            <div class="contact-photo"></div>
-                            <div class="contact-contact"><span>Email</span></div>
-                            <input type="text" id="email-copiado" value="Email-genericoi@generico.com">
-                            <div class="contact-copied" onclick="copieText('email-copiado')"></div>
-                        </div>
                         
-                        <div class="my-contact">
-                            <div class="contact-photo"></div>
-                            <div class="contact-contact"><span>GitHub</span></div>
-                            <input type="text" id="git-copiado" value="WeulerSilva">
-                            <div class="contact-copied" onclick="copieText('git-copiado')"></div>
+                        <div class="contact-number">
+                            <h1>Contatos</h1>
+                            <div class="my-contact">
+                                <div class="contact-copied" onclick="copieText('email-copiado')"></div>
+                                <div class="my-contact-info">
+                                    <div class="contact-contact"><span>Email</span></div>
+                                    <input type="text" id="email-copiado" value="Email-genericoi@generico.com" disabled>
+                                </div>
+                            </div>
+                        
+                            <div class="my-contact">
+                                <div class="contact-copied" onclick="copieText('github-copiado')"></div>
+
+                                <div class="my-contact-info">
+                                    <div class="contact-contact"><span>GitHub</span></div>
+                                    <input type="text" id="github-copiado" value="https://github.com/WeulerSilva" disabled>
+                                </div>   
+                            </div>
+
+                            <div class="my-contact">
+                                <div class="contact-copied" onclick="copieText('linkedin-copiado')"></div>
+
+                                <div class="my-contact-info">
+                                   <div class="contact-contact"><span>Linkedin</span></div>
+                                    <input type="text" id="linkedin-copiado" value="https://www.linkedin.com/in/weuler-silva-b5887627a/" disabled> 
+                                </div>   
+                            </div>
+
+                            <div class="my-contact">
+                                <div class="contact-copied" onclick="downloadPdf()"></div>
+
+                                <div class="my-contact-info">
+                                    <div class="contact-contact"><span>Curiculo</span></div>
+                                    <input type="text" id="linkedin-copiado" value="Clique para baixar o PDF" disabled>
+                                </div>
+                            </div> 
                         </div>
 
-                        <div class="my-contact">
-                            <div class="contact-photo"></div>
-                            <div class="contact-contact"><span>Linkedin</span></div>
-                            <input type="text" id="linkedin-copiado" value="https://www.linkedin.com/in/weuler-silva-b5887627a/">
-                            <div class="contact-copied" onclick="copieText('linkedin-copiado')"></div>
+                        <div class="contact-footer">
+                            <div class="contact-footer-photo"></div>
+                            <h6>Meus contatos</h6>
                         </div>
+                        
                     </div>
                 </div>
             </div>
