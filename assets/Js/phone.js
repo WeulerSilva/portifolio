@@ -1,3 +1,4 @@
+const app = document.querySelectorAll('.app');
 const hours = document.querySelector('.hours');
 const menu = document.querySelector('.menu');
 const firstScreen = document.querySelector('.first-screen');
@@ -18,6 +19,8 @@ const memory = document.querySelector('.memory');
 const internet = document.querySelector('.internet');
 const quiz = document.querySelector('.quiz');
 const contact = document.querySelector('.contact');
+const config = document.querySelector('.config');
+const iWeather = document.querySelector('.i-weather');
 let loadedScriptQuiz = false;
 let loadedScriptInternet = false;
 let loadedScriptMemory = false;
@@ -124,7 +127,18 @@ function loadApp (variable,codigo) {
 }
 
 
+//usar o makeSpan para quando for alterar o idioma dinamicamente não ter que alterar de um em um!
+function makeSpan(cla, te, styLeft) {
+    let sp = document.createElement('span');
+    sp.innerHTML = te;
+    sp.style.left = styLeft
 
+    document.querySelector(cla).appendChild(sp);
+
+    return
+}
+
+makeSpan('.i-weather', 'oi', '5px');
 
 
 //botão ir para o menu
@@ -159,6 +173,9 @@ document.querySelector('.i-weather').addEventListener('click', () => {
     secondScreen.classList.replace('flex', 'none');
     weather.classList.replace('none', 'flex');
     loadedScriptWeather = loadApp(loadedScriptWeather, 'weather');
+
+    appName('oi', 'ola');
+
     backMenu(weather);
     backHomi(weather);
     currentBack ++;
@@ -264,5 +281,20 @@ document.querySelector('.i-contact').addEventListener('click', () => {
     loadedScriptContact = loadApp(loadedScriptContact, 'contact');
     backMenu(contact);
     backHomi(contact);
+    currentBack++;
+})
+
+//app faltando
+
+
+
+
+//app config
+document.querySelector('.i-config').addEventListener('click', () => {
+    secondScreen.classList.replace('flex', 'none');
+    config.classList.replace('none', 'flex');
+    //loadedScriptContact = loadApp(loadedScriptContact, 'contact');
+    backMenu(config);
+    backHomi(config);
     currentBack++;
 })
