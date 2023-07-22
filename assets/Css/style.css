@@ -662,6 +662,7 @@ footer {
 
 .app span {
     position: relative;
+    height: 5px;
     color: black;
     top: 50px;
     font-weight: 900;
@@ -669,6 +670,7 @@ footer {
 
 .span-config {
     position: relative;
+    height: 5px;
     color: black;
     top: 50px;
     left: 4px;
