@@ -46,7 +46,9 @@ function showI(json) {
 
     for (let i = 0; i < json.length; i++) {
         const feriado = json[i];
-        resultHTML += `Data: ${feriado.date},${feriado.name},${feriado.level}`
+        const feriadoInfo = `Data: ${feriado.date},${feriado.name},${feriado.level}`;
+        resultHTML += feriadoInfo;
+        console.log(feriado.name);
     }
 
     document.querySelector('.holiday-result').innerHTML = resultHTML;
