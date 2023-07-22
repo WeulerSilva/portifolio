@@ -32,19 +32,11 @@ document.querySelector('.holiday-search').addEventListener('submit', async (even
         if(json.cod === 200) {
             holiResult.innerHTML = json;
 
-            showI({
-                name: json.name,
-                country: json.sys.country,
-                temp: json.main.temp,
-                tempIcon: json.weather[0].icon,
-                windSpeed: json.wind.speed,
-                windAngle: json.wind.deg
-            });
+            showI(json);
         }else if(input === '') {
-            showW('Digite uma cidade no campo de pesquisa!');
+            showW('Digite uma estado(UF) no campo de pesquisa!');
         }else {
             showW('Digite novamente um estado(UF)');
-            document.querySelector('.info img').setAttribute('src', '');
             holiResult.innerHTML = json;
         }
     }
@@ -52,12 +44,8 @@ document.querySelector('.holiday-search').addEventListener('submit', async (even
 
 function showI(json) {
     showW('.');
-    document.querySelector('.resultado').classList.replace('none', 'flex');
-    document.querySelector('.titulo').innerHTML = `${json.name},${json.country}`;
-    document.querySelector('.temp-info').innerHTML = `${json.temp}ºC`;
-    document.querySelector('.vento-info').innerHTML = `${json.windSpeed} km/h`;
+    document.querySelector('.holiday-result').innerHTML = `${json}`;
 
-    document.querySelector('.info img').setAttribute('src', `https://openweathermap.org/img/wn/${json.tempIcon}@2x.png`);
 };
 
 function showW(msg) {
