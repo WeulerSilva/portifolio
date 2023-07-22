@@ -29,8 +29,8 @@ document.querySelector('.holiday-search').addEventListener('submit', async (even
         let json = await results.json();
 
         console.log(json)
-        if(json.cod === 200) {
-            showI(json);
+        if(json.cod === 200 && Array.isArray(json.data)) {
+            showI(json.data);
 
         }else if(input === '') {
             showW('Digite uma estado(UF) no campo de pesquisa!');
