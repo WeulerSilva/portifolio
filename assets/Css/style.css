@@ -1800,6 +1800,32 @@ table {
     cursor: pointer;
 }
 
+.calendar-day {
+    background-color: white;
+    width: 195px;
+    height: 130px;
+    font-size: 85px;
+    text-align: center;
+    padding-top: 15px;
+    color: black;
+    border: 2px solid black;
+    box-shadow: 2px 2px yellow;
+    text-shadow: 2px 2px yellow;
+}
+
+.calendar h3 {
+    position: relative;
+    bottom: 15px;
+    font-size: 80px;
+    color: black;
+    font-weight: 900;
+    text-shadow: 1px 1px yellow;
+    box-shadow: 1px 1px yellow;
+    background-color: white;
+    border-radius: 5px;
+    border: 3px solid black;
+}
+
 
 /*app config */
 .config {
