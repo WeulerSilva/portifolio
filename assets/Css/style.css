@@ -1751,6 +1751,10 @@ table {
     transition: all 1s ease-in-out;
 }
 
+.calendar h1 {
+    color: black;
+}
+
 .calendar span {
     position: relative;
     top: 100px;
@@ -1802,7 +1806,7 @@ table {
 
 .calendar-day {
     background-color: white;
-    width: 195px;
+    width: 185px;
     height: 130px;
     font-size: 85px;
     text-align: center;
@@ -1815,8 +1819,9 @@ table {
 
 .calendar h3 {
     position: relative;
+    max-width: 195px;
     bottom: 15px;
-    font-size: 80px;
+    font-size: 2.5rem;
     color: black;
     font-weight: 900;
     text-shadow: 1px 1px yellow;
@@ -1824,6 +1829,39 @@ table {
     background-color: white;
     border-radius: 5px;
     border: 3px solid black;
+}
+
+.calendar-change {
+    display: flex;
+    z-index: 2;
+    border: 2px solid black;
+    width: 200px;
+    height: 40px;
+    background-color: white;
+}
+
+.calendar-next {
+    flex: 1;
+    text-align: center;
+    border-left: 2px solid black;
+    cursor: pointer;
+    color: black;
+    text-shadow: 2px 2px yellow;
+    margin-top: 10px;
+}
+
+.calendar-prev {
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+    color: black;
+    text-shadow: 2px 2px yellow;
+    margin-top: 10px;
+    transition: 1.5s;
+}
+
+.calendar-prev:hover , .calendar-next:hover {
+    background-color: yellow;
 }
 
 
