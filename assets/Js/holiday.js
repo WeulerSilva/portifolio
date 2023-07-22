@@ -1,4 +1,5 @@
-let holiDate = document.querySelector('.holidayH')
+let holiDate = document.querySelector('.holidayH');
+let holiResult = document.querySelector('.holiday-result');
 
 function updateDate() {
     let now = new Date();
@@ -29,6 +30,8 @@ document.querySelector('.holiday-search').addEventListener('submit', async (even
 
         console.log(json)
         if(json.cod === 200) {
+            holiResult.innerHTML = json;
+
             showI({
                 name: json.name,
                 country: json.sys.country,
