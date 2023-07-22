@@ -30,9 +30,8 @@ document.querySelector('.holiday-search').addEventListener('submit', async (even
 
         console.log(json)
         if(json.cod === 200) {
-            holiResult.innerHTML = json;
-
             showI(json);
+
         }else if(input === '') {
             showW('Digite uma estado(UF) no campo de pesquisa!');
         }else {
@@ -43,8 +42,11 @@ document.querySelector('.holiday-search').addEventListener('submit', async (even
 });
 
 function showI(json) {
-    showW('.');
-    document.querySelector('.holiday-result').innerHTML = `${json}`;
+    for (let i = 0; i < json.length; i++) {
+        const feriado = json[i];
+        document.querySelector('.holiday-result').innerHTML = `Data: ${feriado.date},${feriado.name},${feriado.level}`;
+    }
+    document.querySelector('.holiday-result').innerHTML = `Data: ${feriado.date},${feriado.name},${feriado.level}`;
 
 };
 
