@@ -23,7 +23,7 @@ document.querySelector('.holiday-search').addEventListener('submit', async (even
     if(input !== '') {
         showW('Carregando...');
 
-        let url = `https://api.invertexto.com/v1/holidays/2023?token=4152|wSIUR6w66fqchzp8YWBctHlBC1lLxM4o&state=${encodeURI(input)}`;
+        let url = `https://api.invertexto.com/v1/holidays/2023?token=4153|cD3Z2qqrekVW7MFjSUWwNAlT7ahdG5Ad&state=${encodeURI(input)}`;
         let results = await fetch(url);
         let json = await results.json();
 
