@@ -1735,6 +1735,26 @@ table {
     cursor: pointer;
 }
 
+/*app holiday*/
+.holiday {
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 218px;
+    height: 464px;
+    background-color: green;
+    color: blue;
+    bottom: 489px;
+    left: 34px;
+    border-radius: 12px;
+    transition: all 1s ease-in-out;
+}
+
+.holiday-search {
+    z-index: 2;
+}
+
 /*app config */
 .config {
     justify-content: space-between;
