@@ -42,11 +42,14 @@ document.querySelector('.holiday-search').addEventListener('submit', async (even
 });
 
 function showI(json) {
+    let resultHTML = '';
+
     for (let i = 0; i < json.length; i++) {
         const feriado = json[i];
-        document.querySelector('.holiday-result').innerHTML = `Data: ${feriado.date},${feriado.name},${feriado.level}`;
-        console.log(feriado.name);
+        resultHTML += `Data: ${feriado.date},${feriado.name},${feriado.level}`
     }
+
+    document.querySelector('.holiday-result').innerHTML = resultHTML;
 
 };
 
