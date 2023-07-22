@@ -1736,14 +1736,14 @@ table {
 }
 
 /*app holiday*/
-.holiday {
+.calendar {
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     position: relative;
     width: 218px;
     height: 464px;
-    background-color: green;
+    background-color: #e4e4e4;
     color: blue;
     bottom: 489px;
     left: 34px;
@@ -1751,9 +1751,55 @@ table {
     transition: all 1s ease-in-out;
 }
 
-.holiday-search {
+.calendar span {
+    position: relative;
+    top: 100px;
+    right: 70px;
+    z-index: 3;
+    border-radius: 5px;
+    border: 2px solid black;
+    color: black;
+    background-color: white;
+    width: 45px;
+    height: 25px;
+    font-size: 20px;
+    margin: 0;
+}
+
+.week {
+    display: flex;
+    margin-top: 15px;
+    gap: 5px;
+    height: 70px;
+    width: 195px;
+    padding: 20px 2px;
+    border-radius: 10px;
+    list-style: none;
+    background-color: #fff;
+    box-shadow: 3px 3px grey;
+    color: black;
+    font-size: 13px;
+    font-weight: 500;
     z-index: 2;
 }
+
+.week li {
+    width: 23px;
+    height: 45px;
+    background-color: yellow;
+}
+
+.week li.current {
+    position: relative;
+    color: #040305;
+    border: 3px solid #aaa;
+    border-radius: 5px;
+    text-align: center;
+    bottom: 35px;
+    width: 50px;
+    cursor: pointer;
+}
+
 
 /*app config */
 .config {

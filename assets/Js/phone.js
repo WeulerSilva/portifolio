@@ -21,7 +21,7 @@ const quiz = document.querySelector('.quiz');
 const contact = document.querySelector('.contact');
 const config = document.querySelector('.config');
 const iWeather = document.querySelector('.i-weather');
-const holiday = document.querySelector('.holiday');
+const calendar = document.querySelector('.calendar');
 let loadedScriptQuiz = false;
 let loadedScriptInternet = false;
 let loadedScriptMemory = false;
@@ -287,12 +287,12 @@ document.querySelector('.i-contact').addEventListener('click', () => {
 
 //app holiday
 
-document.querySelector('.i-holiday').addEventListener('click', () => {
+document.querySelector('.i-calendar').addEventListener('click', () => {
     secondScreen.classList.replace('flex', 'none');
-    holiday.classList.replace('none', 'flex');
-    loadedScriptContact = loadApp(loadedScriptContact, 'holiday');
-    backMenu(holiday);
-    backHomi(holiday);
+    calendar.classList.replace('none', 'flex');
+    loadedScriptContact = loadApp(loadedScriptContact, 'calendar');
+    backMenu(calendar);
+    backHomi(calendar);
     currentBack++;
 })
 
