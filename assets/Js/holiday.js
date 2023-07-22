@@ -45,6 +45,7 @@ document.querySelector('.holiday-search').addEventListener('submit', async (even
         }else {
             showW('Digite novamente um estado(UF)');
             document.querySelector('.info img').setAttribute('src', '');
+            holiResult.innerHTML = json;
         }
     }
 });
