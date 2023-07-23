@@ -7,9 +7,14 @@ let yearNumber = data.getFullYear();
 let monthYear = month[data.getMonth()];
 let numberMonth = data.getDate();
 
+if(dayNumber === 0) {
+    document.querySelector('.dom').classList.replace('dom', 'current');
+}else {
+    let active = document.querySelector(".week li:nth-child("+dayNumber+")");
+    active.classList.add('current');
+}
 
-let active = document.querySelector(".week li:nth-child("+dayNumber+")");
-active.classList.add('current');
+
 
 let dYear = document.querySelector('.calendar span');
 let dDay = document.querySelector('.calendar-day');
@@ -22,7 +27,6 @@ function currentData() {
 }
 
 function atualizarDiaAtual() {
-    // Primeiro, remove a classe 'current' de qualquer elemento que a possua
     const currentElements = document.querySelectorAll('.current');
     currentElements.forEach((element) => {
       element.classList.remove('current');
