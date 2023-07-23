@@ -12,7 +12,7 @@ if(dayNumber === 0) {
 }else {
     let active = document.querySelector(".week li:nth-child("+dayNumber+")");
     active.classList.add('current');
-}
+}   
 
 
 
