@@ -28,6 +28,7 @@ let loadedScriptMemory = false;
 let loadedScriptWeather = false;
 let loadedScriptCalc = false;
 let loadedScriptContact = false;
+let loadedScriptCalendar = false;
 let currentBack = 0;
 let currentAbout = 0;
 let currentWeb;
@@ -175,7 +176,7 @@ document.querySelector('.i-weather').addEventListener('click', () => {
     weather.classList.replace('none', 'flex');
     loadedScriptWeather = loadApp(loadedScriptWeather, 'weather');
 
-    appName('oi', 'ola');
+    //appName('oi', 'ola');
 
     backMenu(weather);
     backHomi(weather);
@@ -285,12 +286,12 @@ document.querySelector('.i-contact').addEventListener('click', () => {
     currentBack++;
 })
 
-//app holiday
+//app calendar
 
 document.querySelector('.i-calendar').addEventListener('click', () => {
     secondScreen.classList.replace('flex', 'none');
     calendar.classList.replace('none', 'flex');
-    loadedScriptContact = loadApp(loadedScriptContact, 'calendar');
+    loadedScriptCalendar = loadApp(loadedScriptCalendar, 'calendar');
     backMenu(calendar);
     backHomi(calendar);
     currentBack++;

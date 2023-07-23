@@ -1759,16 +1759,17 @@ table {
 
 .calendar span {
     position: relative;
+    text-align: center;
     top: 100px;
-    right: 70px;
+    right: 55px;
     z-index: 3;
     border-radius: 5px;
     border: 2px solid black;
     color: black;
     background-color: white;
-    width: 45px;
-    height: 25px;
-    font-size: 20px;
+    width: 85px;
+    height:25px;
+    font-size: 1.5rem;
     margin: 0;
 }
 
