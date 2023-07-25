@@ -642,7 +642,7 @@ footer {
     position: relative;
     width: 218px;
     height: 464px;
-    background-color: aliceblue;
+    background-color: #c3d3e1;
     bottom: 489px;
     left: 34px;
     border-radius: 12px;
@@ -654,7 +654,8 @@ footer {
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    background-color: yellowgreen;
+    background-color: white;
+    box-shadow: 1px 1px black;
     cursor: pointer;
     z-index: 2;
     opacity: 0.9;
@@ -755,6 +756,12 @@ footer {
 }
 
 /*App de clima*/
+.i-weather {
+    background-image: url(../Media/phone/weather-icon.png);
+    background-position: center;
+    background-size: cover;
+}
+
 .weather {
     justify-content: flex-start;
     align-items: center;
@@ -850,6 +857,11 @@ footer {
 }
 
 /* App de camera */
+.i-camera {
+    background-image: url(../Media/phone/camera-icon.png);
+    background-position: center;
+    background-size: cover;
+}
 .camera {
     justify-content: space-between;
     align-items: center;
