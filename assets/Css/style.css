@@ -637,7 +637,7 @@ footer {
     align-items: flex-start;
     flex-wrap: wrap;
     padding-top: 24px;
-    gap: 18px;
+    gap: 22px;
     row-gap: 0px;
     position: relative;
     width: 218px;
@@ -651,7 +651,9 @@ footer {
 
 .app {
     display: flex;
+    font-size: 15px;
     border-radius: 50%;
+    margin-left: -4px;
     width: 50px;
     height: 50px;
     background-color: white;

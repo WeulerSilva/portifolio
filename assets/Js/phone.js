@@ -140,7 +140,15 @@ function makeSpan(cla, te, styLeft) {
     return
 }
 
-makeSpan('.i-weather', 'oi', '5px');
+makeSpan('.i-weather', 'Clima', '5px');
+makeSpan('.i-carrer','Bio','15px');
+makeSpan('.i-github','GitHub','0px');
+makeSpan('.i-linkedin','LinkeDin','-5px');
+makeSpan('.i-memory','Memoria','-5px');
+makeSpan('.i-quiz','Quiz','10px');
+makeSpan('.i-contact','Contatos','-5px');
+makeSpan('.i-calendar','Calendario','-10px');
+makeSpan('.i-config','Config.','5px')
 
 
 //botão ir para o menu
