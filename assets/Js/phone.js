@@ -60,40 +60,6 @@ setInterval(updateClock, 60000);
 
 //Functions
 
-function botaoEng() {
-
-  if (currentAbout == 0) {
-    aboutH.innerHTML = '';
-    document.querySelector('.about h5').innerHTML = '';
-    document.querySelector('.about h5').innerHTML = 'Weuler Silva';
-    aboutH.innerHTML = 'Olá, Eu sou ';
-    aboutP.innerHTML = '';
-    aboutP.innerHTML = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, deleniti recusandae vitae commodi dolore quos reprehenderit blanditiis consectetur saepe fugiat, et, distinctio laudantium doloribus molestiae ad maxime eaque perferendis accusantium.';
-  } else if (currentAbout == 1) {
-    aboutH.innerHTML = '';
-    aboutH.innerHTML = 'Tenho que';
-    document.querySelector('.about h5').innerHTML = '';
-    document.querySelector('.about h5').innerHTML = 'Estudar';
-    aboutP.innerHTML = '';
-    aboutP.innerHTML = 'Preencher depois com varias palavras sem sentido para mudar,apenas para preencher o campo de arquivos etc.para depois mudar plavras que antes estaram aqui nesse campo.';
-  } else if (currentAbout == 2) {
-    aboutH.innerHTML = '';
-    aboutH.innerHTML = 'Mudei que';
-    document.querySelector('.about h5').innerHTML = '';
-    document.querySelector('.about h5').innerHTML = 'Praticar';
-    aboutP.innerHTML = '';
-    aboutP.innerHTML = 'Preencher depois com varias palavras sem sentido para mudar,apenas para preencher o campo de arquivos etc.para depois mudar plavras que antes estaram aqui nesse campo.';
-  } else if (currentAbout == 3) {
-    currentAbout = 0;
-    botaoEng();
-  } else if (currentAbout <= -1) {
-    currentAbout = 2;
-    botaoEng();
-  }
-};
-
-
-
 function buttonBack() {
   if (currentBack <= 0) {
     firstScreen.classList.replace('none', 'flex');
@@ -248,14 +214,73 @@ document.querySelector('.i-carrer').addEventListener('click', () => {
   currentBack++;
 });
 
+function botaoEng() {
+  if(languageEng) {
+    document.querySelector('.about h6').innerHTML = 'About me';
+  }
+
+
+  if (currentAbout == 0) {
+    aboutH.innerHTML = '';
+    document.querySelector('.about h5').innerHTML = '';
+    document.querySelector('.about h5').innerHTML = 'Weuler Silva';
+    aboutP.innerHTML = '';
+
+    if(languageEng) {
+      aboutH.innerHTML = 'Hi, I am ';
+      aboutP.innerHTML = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, deleniti recusandae vitae commodi dolore quos reprehenderit blanditiis consectetur saepe fugiat, et, distinctio laudantium doloribus molestiae ad maxime eaque perferendis accusantium.';
+    }else {
+      aboutH.innerHTML = 'Olá, Eu sou ';
+      aboutP.innerHTML = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, deleniti recusandae vitae commodi dolore quos reprehenderit blanditiis consectetur saepe fugiat, et, distinctio laudantium doloribus molestiae ad maxime eaque perferendis accusantium.';
+    }
+    
+  } else if (currentAbout == 1) {
+    aboutH.innerHTML = '';
+    document.querySelector('.about h5').innerHTML = '';
+    aboutP.innerHTML = '';
+
+    if(languageEng) {
+      aboutH.innerHTML = 'I have to';
+      document.querySelector('.about h5').innerHTML = 'Study';
+      aboutP.innerHTML = 'Preencher depois com varias palavras sem sentido para mudar,apenas para preencher o campo de arquivos etc.para depois mudar plavras que antes estaram aqui nesse campo.';
+    }else {
+      aboutH.innerHTML = 'Tenho que';
+      document.querySelector('.about h5').innerHTML = 'Estudar';
+      aboutP.innerHTML = 'Preencher depois com varias palavras sem sentido para mudar,apenas para preencher o campo de arquivos etc.para depois mudar plavras que antes estaram aqui nesse campo.';
+    }
+    
+  } else if (currentAbout == 2) {
+    aboutH.innerHTML = '';
+    document.querySelector('.about h5').innerHTML = '';
+    aboutP.innerHTML = '';
+
+    if(languageEng) {
+      aboutH.innerHTML = 'I don´t know';
+      document.querySelector('.about h5').innerHTML = 'i have to try';
+      aboutP.innerHTML = 'Preencher depois com varias palavras sem sentido para mudar,apenas para preencher o campo de arquivos etc.para depois mudar plavras que antes estaram aqui nesse campo.';
+    }else {
+      aboutH.innerHTML = 'Mudei que';
+      document.querySelector('.about h5').innerHTML = 'Praticar';
+      aboutP.innerHTML = 'Preencher depois com varias palavras sem sentido para mudar,apenas para preencher o campo de arquivos etc.para depois mudar plavras que antes estaram aqui nesse campo.';
+    }
+    
+  } else if (currentAbout == 3) {
+    currentAbout = 0;
+    botaoEng();
+  } else if (currentAbout <= -1) {
+    currentAbout = 2;
+    botaoEng();
+  }
+};
+
 document.querySelector('.about-prev').addEventListener('click', () => {
-  botaoEng();
   currentAbout--;
+  botaoEng();
 });
 
 document.querySelector('.about-next').addEventListener('click', () => {
-  botaoEng();
   currentAbout++;
+  botaoEng();
 });
 
 //app github
