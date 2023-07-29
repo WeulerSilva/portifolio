@@ -22,7 +22,7 @@ const contact = document.querySelector('.contact');
 const config = document.querySelector('.config');
 const iWeather = document.querySelector('.i-weather');
 const calendar = document.querySelector('.calendar');
-let languageEng = true;
+let languageEng = localStorage.getItem('languageEng') === 'true';
 let loadedScriptQuiz = false;
 let loadedScriptInternet = false;
 let loadedScriptMemory = false;
@@ -348,4 +348,25 @@ document.querySelector('.i-config').addEventListener('click', () => {
     backMenu(config);
     backHomi(config);
     currentBack++;
+})
+
+
+
+
+
+
+
+
+document.querySelector('footer button').addEventListener('click', () => {
+    
+        // Alterna o valor da variável languageEng
+        languageEng = !languageEng;
+    
+        // Armazena o valor atual de languageEng no localStorage
+        localStorage.setItem('languageEng', languageEng);
+    
+        // Recarrega a página para exibir o conteúdo no novo idioma
+        location.reload();
+    
+    console.log(languageEng)
 })

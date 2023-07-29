@@ -2,10 +2,6 @@ if(languageEng) {
     document.querySelector('.weather h1').innerHTML = 'Weather';
     document.querySelector('.aviso').innerHTML = 'Enter the name of the city you want to search for the current weather!';
     document.querySelector('.busca button').innerHTML = 'Search';
-}else {
-    document.querySelector('.weather h1').innerHTML = 'Clima';
-    document.querySelector('.aviso').innerHTML = 'Digite o nome da cidade que você deseja pesquisar sobre o clima atual!';
-    document.querySelector('.busca button').innerHTML = 'Buscar';
 }
 
 document.querySelector('.busca').addEventListener('submit', async (event) => {
