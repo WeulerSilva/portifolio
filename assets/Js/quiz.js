@@ -359,6 +359,7 @@ function finishQuiz() {
     if(languageEng) {
       document.querySelector('.score-pct').innerHTML = `Hit ${points}%`;
       document.querySelector('.score-text-two').innerHTML = `You hit ${questions.length} and accepted ${correctAnswer}`;
+      document.querySelector('.score-area button').innerHTML = 'Try again';
     }else {
       document.querySelector('.score-pct').innerHTML = `Acertou ${points}%`;
       document.querySelector('.score-text-two').innerHTML = `Você respondeu ${questions.length} e acertou ${correctAnswer}`;
