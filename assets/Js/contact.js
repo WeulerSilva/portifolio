@@ -4,6 +4,13 @@ const contactOpenC = document.querySelector('.contact-open-center');
 const contactOpenH = document.querySelector('.contact-open-center h3');
 const contactOpenLinks = document.querySelector('.contact-open-links');
 
+
+if(languageEng) {
+    document.querySelector('.contact-number h1').innerHTML = 'Contacts';
+    document.querySelector('.resume').innerHTML = 'Résumé';
+    document.querySelector('.contact-footer h6').innerHTML = 'My contacts';
+}
+
 myContact.forEach((item) => {
     item.addEventListener('click', () => {
         openContacts(item);
@@ -82,10 +89,19 @@ function copieText(idElement) {
 
     navigator.clipboard.writeText(texto)
         .then(function() {
-            alert("Texto copiado: " + texto);
+            if(languageEng) {
+                alert("copied text: " + texto);
+            }else {
+                alert("Texto copiado: " + texto);
+            }
+            
         })
         .catch(function(error) {
-            console.error("Erro ao copiar texto: ", error);
+            if(languageEng) {
+                console.error("Error copying text: ", error);
+            }else {
+                console.error("Erro ao copiar texto: ", error);
+            }
         });
 }
 
