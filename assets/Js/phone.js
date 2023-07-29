@@ -22,6 +22,7 @@ const contact = document.querySelector('.contact');
 const config = document.querySelector('.config');
 const iWeather = document.querySelector('.i-weather');
 const calendar = document.querySelector('.calendar');
+let languageEng = true;
 let loadedScriptQuiz = false;
 let loadedScriptInternet = false;
 let loadedScriptMemory = false;
@@ -138,17 +139,43 @@ function makeSpan(cla, te, styLeft) {
     document.querySelector(cla).appendChild(sp);
 
     return
+};
+
+function appLanguage() {
+    if(languageEng) {
+        makeSpan('.i-weather', 'Weather', '0px');
+        makeSpan('.i-carrer','Bio','15px');
+        makeSpan('.i-github','GitHub','0px');
+        makeSpan('.i-linkedin','LinkeDin','-5px');
+        makeSpan('.i-memory','Memory','-3px');
+        makeSpan('.i-quiz','Quiz','10px');
+        makeSpan('.i-contact','Contact','-5px');
+        makeSpan('.i-calendar','Calendar','-5px');
+        makeSpan('.i-config','Config.','5px');
+        makeSpan('.i-internet','internet','0px');
+        makeSpan('.i-calculator','Calculator','-4px');
+        makeSpan('.i-camera','Camera','0px');
+        document.querySelector('.back-img').title = 'Back';
+        document.querySelector('.homi-img').title = 'home';
+    }else{
+        makeSpan('.i-weather', 'Clima', '5px');
+        makeSpan('.i-carrer','Bio','15px');
+        makeSpan('.i-github','GitHub','0px');
+        makeSpan('.i-linkedin','LinkeDin','-5px');
+        makeSpan('.i-memory','Memoria','-5px');
+        makeSpan('.i-quiz','Quiz','10px');
+        makeSpan('.i-contact','Contatos','-5px');
+        makeSpan('.i-calendar','Calendario','-10px');
+        makeSpan('.i-config','Config.','5px');
+        makeSpan('.i-internet','internet','0px');
+        makeSpan('.i-calculator','Calcular','0px');
+        makeSpan('.i-camera','Camera','0px');
+    }
 }
 
-makeSpan('.i-weather', 'Clima', '5px');
-makeSpan('.i-carrer','Bio','15px');
-makeSpan('.i-github','GitHub','0px');
-makeSpan('.i-linkedin','LinkeDin','-5px');
-makeSpan('.i-memory','Memoria','-5px');
-makeSpan('.i-quiz','Quiz','10px');
-makeSpan('.i-contact','Contatos','-5px');
-makeSpan('.i-calendar','Calendario','-10px');
-makeSpan('.i-config','Config.','5px')
+appLanguage();
+
+
 
 
 //botão ir para o menu
@@ -197,6 +224,13 @@ document.querySelector('.i-camera').addEventListener('click', () => {
     secondScreen.classList.replace('flex', 'none');
     camera.classList.replace('none', 'flex');
     weather.classList.replace('flex', 'none');
+
+    if(languageEng) {
+        document.querySelector('.ca-front-ball').title = 'Frontal camera';
+    }else {
+        document.querySelector('.ca-front-ball').title = 'Camera frontal';
+    }
+
     backMenu(camera);
     backHomi(camera);
     currentBack++;
