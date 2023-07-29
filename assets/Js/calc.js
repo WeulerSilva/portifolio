@@ -1,3 +1,7 @@
+if(languageEng) {
+    document.querySelector('.calculator h1').innerHTML = 'Calculator';
+}
+
 const screen = document.querySelector('.calculator input');
 
 
@@ -21,8 +25,13 @@ function calcular () {
         document.querySelector('.calculator input').style.textAlign = 'right';
         let resu = eval(resultado);
         screen.value = resu
-    }else {    
-        document.querySelector('.calculator input').value = 'Digite algo...';
+    }else {
+        if(languageEng) {
+            document.querySelector('.calculator input').value = 'Calculate...';
+        }else {
+            document.querySelector('.calculator input').value = 'Digite algo...';
+        }    
+        
         document.querySelector('.calculator input').style.textAlign = 'left';
         setTimeout(() => {
             document.querySelector('.calculator input').value = '';

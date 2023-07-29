@@ -176,8 +176,6 @@ function appLanguage() {
 appLanguage();
 
 
-
-
 //botão ir para o menu
 menu.addEventListener('click',() => {
     firstScreen.classList.replace('flex', 'none');
@@ -264,6 +262,13 @@ document.querySelector('.about-next').addEventListener('click', () => {
 document.querySelector('.i-github').addEventListener('click', () => {
     secondScreen.classList.replace('flex', 'none');
     github.classList.replace('none', 'flex');
+
+    if(languageEng) {
+        document.querySelector('.git-status').innerHTML = 'Inglish text that will be change after i finish my github project or something like that!'
+        document.querySelector('.git-perf').innerHTML = 'Profile';
+        document.querySelector('.git-rep').innerHTML = 'Repositories';
+    }
+
     backMenu(github);
     backHomi(github);
     currentBack++;
@@ -273,6 +278,13 @@ document.querySelector('.i-github').addEventListener('click', () => {
 document.querySelector('.i-linkedin').addEventListener('click', () => {
     secondScreen.classList.replace('flex', 'none');
     linkedin.classList.replace('none', 'flex');
+
+    if(languageEng) {
+        document.querySelector('.linkedin a').innerHTML = 'Go to My Profile';
+        document.querySelector('.linkedin-about h2').innerHTML = 'About';
+        document.querySelector('.linkedin-about p').innerHTML = 'Again like github this message text will be change when i finish my website and focus on social media!';
+    }
+
     backMenu(linkedin);
     backHomi(linkedin);
     currentBack++;
