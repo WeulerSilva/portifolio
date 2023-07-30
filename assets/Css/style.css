@@ -771,7 +771,7 @@ footer {
     position: relative;
     width: 218px;
     height: 464px;
-    background-color: rgb(61, 28, 28);
+    background-color: #F9F871;
     bottom: 489px;
     left: 34px;
     border-radius: 12px;
@@ -800,20 +800,26 @@ footer {
     width: 170px;
     font-size: 18px;
     z-index: 2;
-    opacity: 0.5;
+    opacity: 0.9;
     font-family: sans-serif;
     outline: 0;
+    color: black;
 }
 
 .busca button {
     margin: auto;
-    border-bottom: 5px solid black;
-    border-radius: 10px;
+    border-bottom: 12px solid black;
+    border-radius: 25px;
     width: 100px;
     font-size: 20px;
     font-family: cursive;
     z-index: 2;
     cursor: pointer;
+    transition: 1s;
+}
+
+.busca button:hover {
+    border-bottom: 2px solid black;
 }
 
 .aviso {
@@ -1265,7 +1271,7 @@ footer {
 
 table {
     background-color: rgba(24, 31, 50, 0.5);
-    margin-top: 20px;
+    margin-top: 7px;
     z-index: 2;
 }
 
@@ -1384,12 +1390,12 @@ table {
 .memory-grid {
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    border: 3px solid black;
+    border: 3px solid white;
     border-radius: 3px;
     gap: 7px;
     width: 100%;
     max-width: 200px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: white;
     margin: 0 auto;
     margin-top: -48px;
 }
@@ -1425,10 +1431,11 @@ table {
 
 /*mudar posteiormente o cback sera a parte da frente da carta e o front a que sera escondida*/
 .cback {
-    background-image: url(../Media/phone/tela.png);
+    /*background-image: url(../Media/phone/tela.png);*/
     background-size: cover;
     background-position: center;
     backface-visibility: hidden;
+    background-color: #F9F871;
 }
 
 /*app internet*/
@@ -1453,7 +1460,7 @@ table {
     gap: 15px;
     width: 100%;
     height: 15%;
-    background-color: #d7d7d7;
+    background-color: #2F4858;
 }
 
 .inter-header-logo {
@@ -1469,7 +1476,7 @@ table {
 }
 
 .inter-body {
-    background-color: rgba(255, 0, 0, 0.568);
+    background-color: #4A62FF;
     width: 100%;
     height: 70%;
 }
@@ -1568,17 +1575,37 @@ table {
     width: 218px;
     height: 464px;
     background-color: darkorange;
-    color: blue;
+    color: white;
     bottom: 489px;
     left: 34px;
     border-radius: 12px;
     transition: all 1s ease-in-out;
 }
 
+.score-area {
+    background-color: #895999;
+    color: white;
+    text-align: center;
+    width: 200px;
+    font-size: 25px;
+}
+
 .score-area button {
     position: relative;
     z-index: 2;
     cursor: pointer;
+    background-color: #2F4858;
+    color: white;
+    width: 75px;
+    font-size: 20px;
+    margin-top: 5px;
+    border-radius: 5px;
+    top: 25px;
+}
+
+.score-pct {
+    background-color: white;
+    margin: 10px 0px;
 }
 
 .progress {
@@ -1589,7 +1616,7 @@ table {
     right: 0;
 }
 .progress-bar {
-    background-color: #00FF00;
+    background-color: #2F4858;
     height: 100%;
     transition: all ease .5s;
 }
@@ -1611,14 +1638,14 @@ table {
 }
 
 .question {
-    background-color: rgb(46, 46, 179);
+    background-color: #D1528B;
     color: rgb(255, 255, 255);
     font-size: 30px;
 }
 
 .option {
-    background-color: darkblue;
-    color: #00FF00;
+    background-color: #2F4858;
+    color: white;
     margin-top: 10px;
     font-size: 25px;
     transition: 0.5s;
@@ -1629,7 +1656,7 @@ table {
 }
 
 .option span {
-    background-color: rgb(46, 46, 179);
+    background-color: #D1528B;
     color: white;
 }
 
@@ -1760,7 +1787,6 @@ table {
     width: 218px;
     height: 464px;
     background-color: #e4e4e4;
-    color: blue;
     bottom: 489px;
     left: 34px;
     border-radius: 12px;
@@ -1800,7 +1826,7 @@ table {
     box-shadow: 3px 3px grey;
     color: black;
     font-size: 13px;
-    font-weight: 500;
+    font-weight: 600;
     z-index: 2;
 }
 

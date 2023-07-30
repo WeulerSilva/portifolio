@@ -40,7 +40,7 @@ let numberMonth = data.getDate();
 if(dayNumber === 0) {
 
     if(languageEng) {
-        document.querySelector('.Sat').classList.replace('Sat', 'current');
+        document.querySelector('.Sun').classList.replace('Sun', 'current');
     }else {
         document.querySelector('.dom').classList.replace('dom', 'current');
     }

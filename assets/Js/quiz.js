@@ -348,21 +348,25 @@ function finishQuiz() {
     }else if ( points === 100) {
       if(languageEng) {
         document.querySelector('.score-text').innerHTML = "Wow,You did it, here's your prize:";
+        setTimeout(myCody,3000);
       }else {
         document.querySelector('.score-text').innerHTML = 'Wow Você conseguiu,toma aqui o seu premio:';
-      }
+        setTimeout(myCody,3000);
+    }
         
-        document.querySelector('score-bi').innerHTML = '01101111 01101011 00100000 01100001 01100011 01101000 01101111 00100000 01110001 01110101 01100101 00100000 01110110 01101111 01100011 11101010 00100000 01100110 01101111 01101001 00100000 01101100 01101111 01101110 01100111 01100101 00100000 01100100 01100101 01101101 01100001 01101001 01110011 00101100 01101101 01100001 01110011 00100000 01100001 01110000 01110010 01101111 01110000 01101111 01110011 01101001 01110100 01101111 00100000 01110100 01101111 01101101 01100001 00100000 01100001 01101001 00100000 01110011 01100101 01110101 00100000 01110000 01100001 01110010 01100001 01100010 01100101 01101110 01110011 00100001 ';
-        document.querySelector('.score-pct').style.color = '#00FF00';
+    function myCody() {
+        alert('01101111 01101011 00100000 01100001 01100011 01101000 01101111 00100000 01110001 01110101 01100101 00100000 01110110 01101111 01100011 11101010 00100000 01100110 01101111 01101001 00100000 01101100 01101111 01101110 01100111 01100101 00100000 01100100 01100101 01101101 01100001 01101001 01110011 00101100 01101101 01100001 01110011 00100000 01100001 01110000 01110010 01101111 01110000 01101111 01110011 01101001 01110100 01101111 00100000 01110100 01101111 01101101 01100001 00100000 01100001 01101001 00100000 01110011 01100101 01110101 00100000 01110000 01100001 01110010 01100001 01100010 01100101 01101110 01110011 00100001 ');
+    }
+
     }
 
     if(languageEng) {
       document.querySelector('.score-pct').innerHTML = `Hit ${points}%`;
-      document.querySelector('.score-text-two').innerHTML = `You hit ${questions.length} and accepted ${correctAnswer}`;
+      document.querySelector('.score-text-two').innerHTML = `You hit ${questions.length} and accepted ${correctAnswer}!!!`;
       document.querySelector('.score-area button').innerHTML = 'Try again';
     }else {
       document.querySelector('.score-pct').innerHTML = `Acertou ${points}%`;
-      document.querySelector('.score-text-two').innerHTML = `Você respondeu ${questions.length} e acertou ${correctAnswer}`;
+      document.querySelector('.score-text-two').innerHTML = `Você respondeu ${questions.length} e acertou ${correctAnswer}!!!`;
     }
     
 
