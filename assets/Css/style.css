@@ -1884,8 +1884,8 @@ table {
 
 /*app config */
 .config {
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-direction: column;
     position: relative;
     width: 218px;
@@ -1896,4 +1896,9 @@ table {
     left: 34px;
     border-radius: 12px;
     transition: all 1s ease-in-out;
+}
+
+.config-lang {
+    margin: 0px 0px 0px 15px;
+    z-index: 2;
 }

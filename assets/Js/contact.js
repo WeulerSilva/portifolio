@@ -33,6 +33,9 @@ myContact.forEach((item) => {
         contactOpenC.classList.replace('none', 'flex');
         makeDivs(getS);
     }else if(getA === 'Curriculo') {
+        if(languageEng) {
+            document.querySelector('.contact-open-center h3').innerHTML = 'Résumé';
+        }
         contactOpenLinks.innerHTML = '';
         contactOpenC.classList.replace('none', 'flex');
         

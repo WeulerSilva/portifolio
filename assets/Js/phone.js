@@ -30,6 +30,7 @@ let loadedScriptWeather = false;
 let loadedScriptCalc = false;
 let loadedScriptContact = false;
 let loadedScriptCalendar = false;
+let loadedScriptConfig = false;
 let currentBack = 0;
 let currentAbout = 0;
 let currentWeb;
@@ -381,7 +382,7 @@ document.querySelector('.i-calendar').addEventListener('click', () => {
 document.querySelector('.i-config').addEventListener('click', () => {
   secondScreen.classList.replace('flex', 'none');
   config.classList.replace('none', 'flex');
-  //loadedScriptContact = loadApp(loadedScriptContact, 'contact');
+  loadedScriptConfig = loadApp(loadedScriptConfig, 'config');
   backMenu(config);
   backHomi(config);
   currentBack++;
