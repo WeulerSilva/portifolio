@@ -2,7 +2,9 @@ if(languageEng) {
   document.querySelector('.config h1').innerHTML = 'Settings';
   document.querySelector('.config p').innerHTML = 'Change language:';
   document.querySelector('.config button').innerHTML = 'Make change';
+  document.querySelector('.eng').setAttribute('selected','true')
 }
+
 
 
 document.querySelector('.config-lang').addEventListener('click', (e) => {
