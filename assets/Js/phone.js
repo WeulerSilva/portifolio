@@ -22,6 +22,7 @@ const contact = document.querySelector('.contact');
 const config = document.querySelector('.config');
 const iWeather = document.querySelector('.i-weather');
 const calendar = document.querySelector('.calendar');
+const dialogue = document.querySelector('.dialogue');
 let languageEng = localStorage.getItem('languageEng') === 'true';
 let loadedScriptQuiz = false;
 let loadedScriptInternet = false;
@@ -148,6 +149,7 @@ menu.addEventListener('click', () => {
   firstScreen.classList.replace('flex', 'none');
   secondScreen.classList.replace('none', 'flex');
   bottons.classList.replace('none', 'flex');
+
   currentBack++;
   buttonBack();
 });
@@ -158,6 +160,11 @@ homi.addEventListener('click', () => {
   firstScreen.classList.replace('none', 'flex');
   bottons.classList.replace('flex', 'none');
   camera.classList.remove('camera-img');
+
+  if(dialogue.classList.contains('flex')) {
+    dialogue.classList.replace('flex','none');
+  }
+
   currentBack = 0;
   buttonBack();
 });
@@ -166,6 +173,11 @@ homi.addEventListener('click', () => {
 back.addEventListener('click', () => {
   secondScreen.classList.replace('none', 'flex');
   camera.classList.remove('camera-img');
+
+  if(dialogue.classList.contains('flex')) {
+    dialogue.classList.replace('flex','none');
+  }
+
   currentBack--;
   buttonBack();
 });
@@ -182,6 +194,7 @@ document.querySelector('.i-weather').addEventListener('click', () => {
   backHomi(weather);
   currentBack++;
   buttonBack();
+  
 });
 
 //app de camera

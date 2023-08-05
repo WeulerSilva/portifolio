@@ -1091,6 +1091,11 @@ footer {
 
 
 /* App github */
+.i-github {
+  background-image: url(../Media/phone/github-icon.png);
+  background-position: center;
+  background-size: cover;
+}
 
 .github {
   justify-content: flex-start;
@@ -1191,6 +1196,12 @@ footer {
 }
 
 /* app Linkedin */
+.i-linkedin {
+  background-image: url(../Media/phone/linkedin-icon2.png);
+  background-position: center;
+  background-size: cover;
+}
+
 .linkedin {
   justify-content: flex-start;
   align-items: center;
@@ -1846,6 +1857,12 @@ table {
 }
 
 /*app holiday*/
+.i-calendar {
+  background-image: url(../Media/phone/calendar-icon.png);
+  background-position: center;
+  background-size: cover;
+}
+
 .calendar {
   justify-content: flex-start;
   align-items: center;
@@ -1995,5 +2012,22 @@ table {
 .config-lang {
   margin: 0px 0px 0px 15px;
   z-index: 2;
+  text-align: center;
+}
+
+
+
+/*dialogue*/
+.dialogue {
+  align-items: center;
+  position: absolute;
+  top: 150px;
+  left: 20px;
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: white;
+  width: 70vw;
+  height: 30vh;
+  font-size: 25px;
   text-align: center;
 }

@@ -1,7 +1,7 @@
 let month = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
 let monthEng = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-let dayName = ['dom', 'seg', 'ter', 'qua', 'qui', 'sex', 'sab'];
-let dayNameEng = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+let dayName = ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'sab', 'Dom'];
+let dayNameEng = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
 function creatLi(dayEng) {
   const weekUl = document.querySelector('.week');
