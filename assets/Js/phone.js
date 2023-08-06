@@ -205,7 +205,9 @@ document.querySelector('.i-camera').addEventListener('click', () => {
 
   if (languageEng) {
     document.querySelector('.ca-front-ball').title = 'Frontal camera';
+    changeText(objAppEng,'camera');
   } else {
+    changeText(objApp,'camera');
     document.querySelector('.ca-front-ball').title = 'Camera frontal';
   }
 
@@ -214,8 +216,17 @@ document.querySelector('.i-camera').addEventListener('click', () => {
   currentBack++;
 });
 
+let currentCamera = 0;
+
 document.querySelector('.camera-front').addEventListener('click', () => {
   camera.classList.add('camera-img');
+  if (languageEng && currentCamera === 0) {
+    currentCamera++;
+    changeText(objAppEng,'cameraFront');
+  } else if(languageEng === false && currentCamera === 0){
+    currentCamera++;
+    changeText(objApp,'cameraFront');
+  }
 });
 
 //app de sobre min
@@ -231,6 +242,9 @@ document.querySelector('.i-carrer').addEventListener('click', () => {
 function botaoEng() {
   if(languageEng) {
     document.querySelector('.about h6').innerHTML = 'About me';
+    changeText(objAppEng, 'bio');
+  }else {
+    changeText(objApp, 'bio');
   }
 
 
@@ -306,6 +320,9 @@ document.querySelector('.i-github').addEventListener('click', () => {
     document.querySelector('.git-status').innerHTML = 'Inglish text that will be change after i finish my github project or something like that!'
     document.querySelector('.git-perf').innerHTML = 'Profile';
     document.querySelector('.git-rep').innerHTML = 'Repositories';
+    changeText(objAppEng,'github');
+  }else {
+    changeText(objApp,'github');
   }
 
   backMenu(github);
@@ -322,6 +339,9 @@ document.querySelector('.i-linkedin').addEventListener('click', () => {
     document.querySelector('.linkedin a').innerHTML = 'Go to My Profile';
     document.querySelector('.linkedin-about h2').innerHTML = 'About';
     document.querySelector('.linkedin-about p').innerHTML = 'Again like github this message text will be change when i finish my website and focus on social media!';
+    changeText(objAppEng,'linkedin');
+  }else {
+    changeText(objApp,'linkedin');
   }
 
   backMenu(linkedin);

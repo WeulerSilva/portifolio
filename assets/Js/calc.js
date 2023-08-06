@@ -1,5 +1,8 @@
 if (languageEng) {
   document.querySelector('.calculator h1').innerHTML = 'Calculator';
+  changeText(objAppEng,'calculator');
+}else {
+  changeText(objApp,'calculator');
 }
 
 const screen = document.querySelector('.calculator input');

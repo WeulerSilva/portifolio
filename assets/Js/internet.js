@@ -1,5 +1,11 @@
 currentWeb = 1;
 
+if(languageEng) {
+  changeText(objAppEng,'internet');
+}else {
+  changeText(objApp,'internet');
+}
+
 const objectWebOne = {
   metallica: {
     a: 'METALLICA: Um site feito de fã para fã!',

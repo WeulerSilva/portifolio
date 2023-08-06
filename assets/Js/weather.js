@@ -2,9 +2,9 @@ if (languageEng) {
   document.querySelector('.weather h1').innerHTML = 'Weather';
   document.querySelector('.aviso').innerHTML = 'Enter the name of the city you want to search for the current weather!';
   document.querySelector('.busca button').innerHTML = 'Search';
-  changeText(objDialogueEng,'weather');
+  changeText(objAppEng,'weather');
 }else {
-  changeText(objDialogue,'weather');
+  changeText(objApp,'weather');
 }
 
 

@@ -42,7 +42,7 @@ if (dayNumber === 0) {
   if (languageEng) {
     document.querySelector('.Sun').classList.replace('Sun', 'current');
   } else {
-    document.querySelector('.dom').classList.replace('dom', 'current');
+    document.querySelector('.Dom').classList.replace('Dom', 'current');
   }
 
 } else {
@@ -102,6 +102,12 @@ function changeData(days) {
 }
 
 currentData();
+
+if (languageEng) {
+  changeText(objAppEng,'calendar');
+} else{
+  changeText(objApp,'calendar');
+}
 
 document.querySelector('.calendar-next').addEventListener('click', () => {
   changeData(1);

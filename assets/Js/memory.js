@@ -3,6 +3,9 @@ if(languageEng) {
   document.querySelector('.memory p').innerHTML = 'Life: 18';
   document.querySelector('.memory-win').innerHTML = 'W: 0';
   document.querySelector('.memory-lose').innerHTML = 'L: 0';
+  changeText(objAppEng,'memory');
+}else {
+  changeText(objApp, 'memory');
 }
 
 const grid = document.querySelector('.memory-grid');

@@ -210,6 +210,12 @@ let questionsEng = [
   },
 ];
 
+if(languageEng) {
+  changeText(objAppEng,'quiz');
+}else {
+  changeText(objApp, 'quiz');
+}
+
 
 let currentQuestion = 0;
 let correctAnswer = 0;
@@ -348,16 +354,11 @@ function finishQuiz() {
   } else if (points === 100) {
     if (languageEng) {
       document.querySelector('.score-text').innerHTML = "Wow,You did it, here's your prize:";
-      setTimeout(myCody, 3000);
+      changeText(objApp, 'quizwinner');
     } else {
       document.querySelector('.score-text').innerHTML = 'Wow Você conseguiu,toma aqui o seu premio:';
-      setTimeout(myCody, 3000);
+      changeText(objApp, 'quizwinner');
     }
-
-    function myCody() {
-      alert('01101111 01101011 00100000 01100001 01100011 01101000 01101111 00100000 01110001 01110101 01100101 00100000 01110110 01101111 01100011 11101010 00100000 01100110 01101111 01101001 00100000 01101100 01101111 01101110 01100111 01100101 00100000 01100100 01100101 01101101 01100001 01101001 01110011 00101100 01101101 01100001 01110011 00100000 01100001 01110000 01110010 01101111 01110000 01101111 01110011 01101001 01110100 01101111 00100000 01110100 01101111 01101101 01100001 00100000 01100001 01101001 00100000 01110011 01100101 01110101 00100000 01110000 01100001 01110010 01100001 01100010 01100101 01101110 01110011 00100001 ');
-    }
-
   }
 
   if (languageEng) {

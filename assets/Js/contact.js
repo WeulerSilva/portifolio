@@ -9,6 +9,9 @@ if (languageEng) {
   document.querySelector('.contact-number h1').innerHTML = 'Contacts';
   document.querySelector('.resume').innerHTML = 'Résumé';
   document.querySelector('.contact-footer h6').innerHTML = 'My contacts';
+  changeText(objAppEng,'contact');
+}else {
+  changeText(objApp,'contact');
 }
 
 myContact.forEach((item) => {
