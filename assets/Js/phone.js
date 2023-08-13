@@ -3,6 +3,8 @@ const hours = document.querySelector('.hours');
 const menu = document.querySelector('.menu');
 const firstScreen = document.querySelector('.first-screen');
 const secondScreen = document.querySelector('.second-screen');
+const square = document.querySelector('.square');
+const squareApp = document.querySelector('.square-app');
 const homi = document.querySelector('.homi-img');
 const back = document.querySelector('.back-img');
 const weather = document.querySelector('.weather');
@@ -150,6 +152,7 @@ menu.addEventListener('click', () => {
   secondScreen.classList.replace('none', 'flex');
   bottons.classList.replace('none', 'flex');
 
+  changeText(objApp,'menu');
   currentBack++;
   buttonBack();
 });
@@ -179,6 +182,15 @@ back.addEventListener('click', () => {
   }
 
   currentBack--;
+  buttonBack();
+});
+
+//botão square 
+square.addEventListener('click', () => {
+  secondScreen.classList.replace('', 'flex');
+  bottons.classList.replace('none', 'flex');
+
+  currentBack++;
   buttonBack();
 });
 

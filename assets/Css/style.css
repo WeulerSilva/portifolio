@@ -808,11 +808,26 @@ footer {
   transition: all 1s ease-in-out;
 }
 
+.square-app {
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  width: 218px;
+  height: 464px;
+  background-color: green;
+  bottom: 489px;
+  left: 34px;
+  border-radius: 12px;
+  transition: all 1s ease-in-out;
+}
+
 /*App de clima*/
 .i-weather {
   background-image: url(../Media/phone/weather-icon.png);
   background-position: center;
   background-size: cover;
+  opacity: 0.8;
 }
 
 .weather {
@@ -1197,7 +1212,7 @@ footer {
 
 /* app Linkedin */
 .i-linkedin {
-  background-image: url(../Media/phone/linkedin-icon2.png);
+  background-image: url(../Media/phone/linkedin-icon3.png);
   background-position: center;
   background-size: cover;
 }
@@ -1312,6 +1327,13 @@ footer {
 }
 
 /*app de calculadora*/
+.i-calculator {
+  background-image: url(../Media/phone/calc-icon3.png);
+  background-position: center;
+  background-size: cover;
+  opacity: 0.8;
+}
+
 .calculator {
   justify-content: flex-start;
   align-items: center;
@@ -2025,7 +2047,7 @@ table {
   left: 20px;
   border: 1px solid black;
   border-radius: 8px;
-  background-color: white;
+  background-color: #f3f2ef;
   width: 70vw;
   height: 30vh;
   font-size: 25px;
