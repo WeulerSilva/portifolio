@@ -185,15 +185,6 @@ back.addEventListener('click', () => {
   buttonBack();
 });
 
-//botão square 
-square.addEventListener('click', () => {
-  secondScreen.classList.replace('', 'flex');
-  bottons.classList.replace('none', 'flex');
-
-  currentBack++;
-  buttonBack();
-});
-
 //app de clima
 document.querySelector('.i-weather').addEventListener('click', () => {
   secondScreen.classList.replace('flex', 'none');

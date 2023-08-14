@@ -130,6 +130,9 @@ body {
   width: 100vw;
   height: calc(100vh - 25px);
   background-color: aquamarine;
+  background-image: url(../Images/quarto3.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 footer {
@@ -610,7 +613,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  background-color: black;
 }
 
 .celular {
@@ -944,7 +946,6 @@ footer {
   position: relative;
   width: 218px;
   height: 464px;
-  background-color: green;
   bottom: 489px;
   left: 34px;
   border-radius: 12px;
@@ -1934,6 +1935,7 @@ table {
   font-size: 13px;
   font-weight: 600;
   z-index: 2;
+  opacity: 0.8;
 }
 
 .week li {
