@@ -745,7 +745,6 @@ footer {
   position: relative;
   width: 150px;
   height: 300px;
-  top: 40px;
   left: 180px;
 }
 
@@ -2206,7 +2205,7 @@ table {
   width: 50px;
   height: 50px;
   font-size: 30px;
-  top: 230px;
+  top: 286px;
   right: 20px;
   transform: rotate(45deg);
   border: 1px solid black;
