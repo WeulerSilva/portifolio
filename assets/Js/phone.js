@@ -444,3 +444,13 @@ document.querySelector('footer button').addEventListener('click', () => {
 
   console.log(languageEng)
 })
+
+
+//play video on pc
+  const overlay = document.querySelector('.desk-tv-grey');
+  const videoIframe = document.querySelector('.desk-hand iframe');
+
+  overlay.addEventListener('click', function () {
+      videoIframe.src = videoIframe.src + '&autoplay=1';
+      overlay.style.opacity = '0.8';
+  });

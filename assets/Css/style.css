@@ -1,3 +1,89 @@
+@keyframes chair-animation {
+  0% {
+    transform: rotateY(0deg)
+  }
+
+  5% {
+    transform: rotateY(-15deg)
+  }
+
+  10% {
+    transform: rotateY(-30deg)
+  }
+
+  15% {
+    transform: rotateY(-0deg)
+  }
+
+  20% {
+    transform: rotateY(15deg)
+  }
+
+  25% {
+    transform: rotateY(30deg)
+  }
+
+  30% {
+    transform: rotateY(0deg)
+  }
+
+  35% {
+    transform: rotateY(-15deg)
+  }
+
+  40% {
+    transform: rotateY(-30deg)
+  }
+
+  45% {
+    transform: rotateY(0deg)
+  }
+
+  50% {
+    transform: rotateY(30deg)
+  }
+
+  55% {
+    transform: rotateY(0deg)
+  }
+
+  60% {
+    transform: rotateY(-15deg)
+  }
+
+  65% {
+    transform: rotateY(-30deg)
+  }
+
+  70% {
+    transform: rotateY(-0deg)
+  }
+
+  75% {
+    transform: rotateY(15deg)
+  }
+
+  80% {
+    transform: rotateY(30deg)
+  }
+
+  85% {
+    transform: rotateY(0deg)
+  }
+
+  90% {
+    transform: rotateY(-15deg)
+  }
+
+  95% {
+    transform: rotateY(-30deg)
+  }
+
+  100% {
+    transform: rotateY(0deg)
+  }
+}
+
 @keyframes ride {
   0% {
     transform: rotateZ(-3deg)
@@ -604,6 +690,63 @@ footer {
   width: 100%;
   cursor: pointer;
   position: absolute;
+}
+
+/*desk*/
+.desk {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.desk-img {
+  background-image: url(../Images/desk.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 400px;
+  height: 300px;
+  bottom: 250px;
+  left: 70px;
+}
+
+.desk-hand {
+  background-image: url();
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #00FF00;
+  border-radius: 3px 3px 0px 0px;
+  transform: rotateZ(-4deg);
+  position: relative;
+  left: 195px;
+  top: 10px;
+  width: 100px;
+  height: 61px;
+}
+
+.desk-tv-grey {
+  cursor: pointer;
+  background-color: grey;
+  border-radius: 3px 3px 0px 0px;
+  transform: rotateZ(0deg);
+  position: relative;
+  top: -66px;
+  width: 100px;
+  height: 61px;
+}
+
+.desk-chair {
+  background-image: url(../Images/chair3.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 150px;
+  height: 300px;
+  top: 40px;
+  left: 180px;
 }
 
 
@@ -2045,7 +2188,7 @@ table {
 .dialogue {
   align-items: center;
   position: absolute;
-  top: 150px;
+  top: 10px;
   left: 20px;
   border: 1px solid black;
   border-radius: 8px;
@@ -2054,4 +2197,22 @@ table {
   height: 30vh;
   font-size: 25px;
   text-align: center;
+}
+
+.dialogue-arrow {
+  position: absolute;
+  background-color: #f3f2ef;
+  border-radius: 100% 0% 100% 0% / 100% 100% 0% 0%;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  top: 230px;
+  right: 20px;
+  transform: rotate(45deg);
+  border: 1px solid black;
+}
+
+.dialogue-animation {
+    animation-name: chair-animation;
+    animation-duration: 10s;
 }

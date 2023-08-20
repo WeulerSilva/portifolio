@@ -81,7 +81,15 @@ const objAppEng = {
     let p = document.createElement('p');
     p.setAttribute('id', 'dialogue-text');
     document.querySelector('.dialogue').appendChild(p);
+    let i = document.createElement('div');
+    i.classList.add('dialogue-arrow');
+    document.querySelector('.dialogue').appendChild(i);
 
+    document.querySelector('.desk-chair').classList.add('dialogue-animation');
+
+    setTimeout(() => {
+      document.querySelector('.desk-chair').classList.remove('dialogue-animation');
+    },10000);
     if (object.hasOwnProperty(key)) {
       const dialogue = object[key];
       textContainer.innerHTML = '';
