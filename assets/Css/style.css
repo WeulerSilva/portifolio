@@ -4,11 +4,11 @@
   }
 
   5% {
-    transform: rotateY(-15deg)
+    transform: rotateY(-7deg)
   }
 
   10% {
-    transform: rotateY(-30deg)
+    transform: rotateY(-15deg)
   }
 
   15% {
@@ -16,11 +16,11 @@
   }
 
   20% {
-    transform: rotateY(15deg)
+    transform: rotateY(7deg)
   }
 
   25% {
-    transform: rotateY(30deg)
+    transform: rotateY(15deg)
   }
 
   30% {
@@ -28,11 +28,11 @@
   }
 
   35% {
-    transform: rotateY(-15deg)
+    transform: rotateY(-7deg)
   }
 
   40% {
-    transform: rotateY(-30deg)
+    transform: rotateY(-15deg)
   }
 
   45% {
@@ -40,19 +40,19 @@
   }
 
   50% {
-    transform: rotateY(30deg)
+    transform: rotateY(7deg)
   }
 
   55% {
-    transform: rotateY(0deg)
+    transform: rotateY(15deg)
   }
 
   60% {
-    transform: rotateY(-15deg)
+    transform: rotateY(-7deg)
   }
 
   65% {
-    transform: rotateY(-30deg)
+    transform: rotateY(-15deg)
   }
 
   70% {
@@ -60,11 +60,11 @@
   }
 
   75% {
-    transform: rotateY(15deg)
+    transform: rotateY(7deg)
   }
 
   80% {
-    transform: rotateY(30deg)
+    transform: rotateY(15deg)
   }
 
   85% {
@@ -72,11 +72,11 @@
   }
 
   90% {
-    transform: rotateY(-15deg)
+    transform: rotateY(-7deg)
   }
 
   95% {
-    transform: rotateY(-30deg)
+    transform: rotateY(-15deg)
   }
 
   100% {
