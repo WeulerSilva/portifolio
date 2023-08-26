@@ -2292,6 +2292,16 @@ table {
   }
 }
 
+@media (max-width: 660px) {
+  .dialogue {
+    font-size: 15px;
+  }
+
+  .dialogue-arrow {
+    left: 210px;
+  }
+}
+
 
 
 /*.dialogue {
