@@ -1,6 +1,7 @@
 const app = document.querySelectorAll('.app');
 const hours = document.querySelector('.hours');
 const menu = document.querySelector('.menu');
+const phone = document.querySelector('.phone');
 const firstScreen = document.querySelector('.first-screen');
 const secondScreen = document.querySelector('.second-screen');
 const square = document.querySelector('.square');
@@ -25,6 +26,8 @@ const config = document.querySelector('.config');
 const iWeather = document.querySelector('.i-weather');
 const calendar = document.querySelector('.calendar');
 const dialogue = document.querySelector('.dialogue');
+const secondDesk = document.querySelector('.second-desk');
+const drums = document.querySelector('.drums');
 let languageEng = localStorage.getItem('languageEng') === 'true';
 let loadedScriptQuiz = false;
 let loadedScriptInternet = false;
@@ -454,3 +457,19 @@ document.querySelector('footer button').addEventListener('click', () => {
       videoIframe.src = videoIframe.src + '&autoplay=1';
       overlay.style.opacity = '0.8';
   });
+
+const deskImg = document.querySelector('.desk-img');
+
+//second-desk 
+document.querySelector('.sd-drums').addEventListener('click' , () => {
+  secondDesk.style.display = 'none';
+  drums.style.display = 'flex';
+  deskImg.style.position = 'absolute';
+});
+
+document.querySelector('.sd-phone').addEventListener('click' , () => {
+  secondDesk.style.display = 'none';
+  phone.style.display = 'flex';
+  deskImg.style.position = 'absolute';
+  deskImg.style.bottom = '330px';
+});

@@ -2205,8 +2205,8 @@ table {
   width: 50px;
   height: 50px;
   font-size: 30px;
-  top: 286px;
-  right: 20px;
+  top: 230px;
+  right: 30px;
   transform: rotate(45deg);
   border: 1px solid black;
 }
@@ -2215,3 +2215,99 @@ table {
     animation-name: chair-animation;
     animation-duration: 10s;
 }
+
+/*second-desk*/
+
+.second-desk {
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  background-color: green;
+  width: 60vw;
+  height: 20vh;
+}
+
+.sd-drums {
+  display: flex;
+  background-color: pink;
+  width: 100px;
+  height: 100px;
+}
+
+.sd-phone {
+  display: flex;
+  background-color: red;
+  width: 100px;
+  height: 100px;
+}
+
+@media (max-width: 1250px) {
+  .drums {
+    display: inline-block;
+    z-index: 2;
+  }
+
+  .bateria {
+    position: absolute;
+    bottom: 30px;
+  }
+
+  .dialogue {
+    font-size: 20px;
+  }
+
+  .dialogue-arrow {
+    left: 450px;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    justify-content: center;
+  }
+
+  .drums {
+    display: none;
+  }
+
+  .phone {
+    display: none;
+  }
+
+  .dialogue {
+    font-size: 17px;
+  }
+
+  .dialogue-arrow {
+    left: 350px;
+  }
+
+  .desk-img {
+    left: 0px;
+  }
+
+  .second-desk {
+    display: flex;
+  }
+}
+
+
+
+/*.dialogue {
+  color: red;
+  font-size: 20px;
+}
+
+.desk {
+  display: inline-block;
+}
+
+.desk-img {
+position: absolute;
+}
+
+.bateria {
+  z-index: 2;
+}
+*/
