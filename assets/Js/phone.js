@@ -471,5 +471,5 @@ document.querySelector('.sd-phone').addEventListener('click' , () => {
   secondDesk.style.display = 'none';
   phone.style.display = 'flex';
   deskImg.style.position = 'absolute';
-  deskImg.style.bottom = '330px';
+  //deskImg.style.bottom = '330px';
 });
