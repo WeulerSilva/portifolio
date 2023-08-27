@@ -207,7 +207,7 @@
 }
 
 body {
-  
+  overflow: hidden;
 }
 
 .container {
@@ -2304,6 +2304,10 @@ table {
   .memory h1 {
     font-size: 20px;
     text-align: center;
+  }
+
+  .app span {
+    font-size: 13px;
   }
 }
 
