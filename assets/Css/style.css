@@ -207,7 +207,7 @@
 }
 
 body {
-  overflow: hidden;
+ 
 }
 
 .container {
@@ -2295,6 +2295,7 @@ table {
 @media (max-width: 660px) {
   .dialogue {
     font-size: 14px;
+    width: 85vw;
   }
 
   .dialogue-arrow {
