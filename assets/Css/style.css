@@ -2312,6 +2312,16 @@ table {
   }
 }
 
+@media (max-width: 450px) {
+  .bateria {
+    width: 450px;
+    bottom: -62px;
+  }
+
+  .hi-hat-plus {
+    width: 70%;
+  }
+}
 
 
 /*.dialogue {
