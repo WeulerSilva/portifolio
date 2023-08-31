@@ -207,7 +207,7 @@
 }
 
 body {
-  overflow-y: none;
+  overflow-x: hidden;
 }
 
 .container {
