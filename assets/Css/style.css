@@ -207,7 +207,7 @@
 }
 
 body {
- 
+  overflow-y: none;
 }
 
 .container {
@@ -2313,9 +2313,6 @@ table {
 }
 
 @media (max-width: 450px) {
-  body {
-    overflow-y: none;
-  }
   .bateria {
     width: 450px;
     bottom: -62px;
