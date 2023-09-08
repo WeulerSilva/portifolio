@@ -2242,6 +2242,36 @@ table {
   height: 100px;
 }
 
+.desk-estante {
+  position: relative;
+  bottom: 500px;
+  left: 50px;
+  background-image: url(../Images/estante.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 100px;
+}
+
+.desk-window {
+  position: relative;
+  bottom: 660px;
+  right: 700px;
+  background-image: url(../Images/windows.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 350px;
+  height: 250px;
+}
+
+
+
+
+
+/* responsividade*/
+
 @media (max-width: 1250px) {
   .drums {
     display: inline-block;
@@ -2251,6 +2281,10 @@ table {
   .bateria {
     position: absolute;
     bottom: 30px;
+  }
+
+  .desk-window {
+    right: 330px;
   }
 
   .dialogue {
@@ -2285,6 +2319,10 @@ table {
 
   .desk-img {
     left: 0px;
+  }
+
+  .desk-estante {
+    right:320px
   }
 
   .second-desk {
