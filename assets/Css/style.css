@@ -208,6 +208,7 @@
 
 body {
   overflow: hidden;
+  background-color: grey;
 }
 
 .container {
@@ -2266,13 +2267,38 @@ table {
   height: 250px;
 }
 
+.desk-poster {
+  position: relative;
+  bottom: 800px;
+  right: 150px;
+  background-image: url(../Images/poster.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 150px;
+}
+
+.desk-posters {
+  position: relative;
+  bottom: 1050px;
+  left: 350px;
+  transform: rotateY(50deg);
+  background-image: url(../Images/posters.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+}
+
 
 
 
 
 /* responsividade*/
 
-@media (max-width: 1250px) {
+@media (max-width: 1300px) {
   .drums {
     display: inline-block;
     z-index: 2;
@@ -2293,6 +2319,17 @@ table {
 
   .dialogue-arrow {
     left: 450px;
+  }
+
+  .desk-posters {
+    transform: rotateY(0deg);
+    width: 200px;
+  }
+
+  .desk-poster {
+    bottom: 1000px;
+    left: 250px;
+    width: 120px;
   }
 }
 
@@ -2328,6 +2365,16 @@ table {
   .second-desk {
     display: flex;
   }
+
+  .desk-posters {
+    width: 150px;
+    left: 310px;
+  }
+
+  .desk-poster {
+    width: 90px;
+    bottom: 950px;
+  }
 }
 
 @media (max-width: 660px) {
@@ -2340,6 +2387,15 @@ table {
     left: 210px;
   }
 
+  .bateria {
+    width: 450px;
+    bottom: -62px;
+  }
+
+  .hi-hat-plus {
+    width: 70%;
+  }
+
   .memory h1 {
     font-size: 20px;
     text-align: center;
@@ -2348,9 +2404,34 @@ table {
   .app span {
     font-size: 13px;
   }
+
+  .desk-window {
+    display: none;
+  }
+
+  .desk-posters {
+    bottom: 850px;
+  }
+
+  .desk-poster {
+    bottom: 550px;
+    left: -80px;
+  }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 540px) {
+  .desk-posters {
+    left: 250px;
+  }
+
+  .desk-poster {
+    bottom: 740px;
+    left: 100px;
+  }
+
+}
+
+@media (max-width: 500px) {
   .bateria {
     width: 450px;
     bottom: -62px;
@@ -2358,6 +2439,16 @@ table {
 
   .hi-hat-plus {
     width: 70%;
+  }
+}
+
+@media (max-width: 450px) {
+  .bateria {
+    display: none;
+  }
+
+  .sd-drums {
+    display: none;
   }
 }
 
