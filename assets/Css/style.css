@@ -207,7 +207,6 @@
 }
 
 body {
-  overflow: hidden;
   background-color: grey;
 }
 
@@ -776,6 +775,7 @@ footer {
 .celular>div {
   position: absolute;
   top: 0;
+  height: 300px;
 }
 
 .first-screen {
