@@ -207,6 +207,7 @@
 }
 
 body {
+  overflow: hidden;
   background-color: grey;
 }
 
@@ -2420,6 +2421,9 @@ table {
 }
 
 @media (max-width: 540px) {
+  body {
+    overflow: auto;
+  }
   .desk-posters {
     left: 250px;
   }
