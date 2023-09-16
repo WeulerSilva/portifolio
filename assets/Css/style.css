@@ -1,3 +1,19 @@
+@keyframes lightBlink {
+  0%, 100% {
+      background-color: red;
+      opacity: 0.3;
+  }
+  25% {
+      background-color: yellow; 
+  }
+  50% {
+    background-color: blue;
+  }
+  75% {
+    background-color: green;
+  }
+}
+
 @keyframes chair-animation {
   0% {
     transform: rotateY(0deg)
@@ -2270,8 +2286,20 @@ table {
 
 .desk-window {
   position: relative;
+  background-image: url(../Images/);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
   bottom: 660px;
-  right: 700px;
+  right: 600px;
+  width: 210px;
+  height: 250px;
+}
+
+.desk-wind-view {
+  position: relative;
+  right: 70px;
+  bottom: 10px;
   background-image: url(../Images/windows.png);
   background-position: center;
   background-size: contain;
@@ -2343,6 +2371,30 @@ table {
   box-shadow: 3px 3px 3px black;
 }
 
+.desk-led {
+  position: relative;
+  width: 6px;
+  height: 58px;
+  bottom: 1034px;
+  left: 140px;
+  animation: lightBlink 4s ease-in-out infinite;
+  border-radius: 4px;
+  transform: rotate(-1deg);
+  filter: blur(9px);
+}
+
+.desk-led-t {
+  position: relative;
+  width: 4px;
+  height: 58px;
+  bottom: 1090px;
+  left: 142px;
+  animation: lightBlink 4s ease-in-out infinite;
+  border-radius: 4px;
+  transform: rotate(-1deg);
+}
+
+
 
 /* responsividade*/
 
@@ -2358,7 +2410,7 @@ table {
   }
 
   .desk-window {
-    right: 330px;
+    right: 250px;
   }
 
   .dialogue {
@@ -2484,6 +2536,14 @@ table {
     bottom: 900px;
     right: 30px;
   }
+
+  .desk-led {
+    bottom: 780px;
+  }
+
+  .desk-led-t {
+    bottom: 842px;
+  }
 }
 
 @media (max-width: 540px) {
@@ -2499,6 +2559,13 @@ table {
     left: 100px;
   }
 
+  .desk-led {
+    bottom: 780px;
+  }
+
+  .desk-led-t {
+    bottom: 842px;
+  }
 }
 
 @media (max-width: 500px) {

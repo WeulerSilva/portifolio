@@ -100,6 +100,9 @@ const objAppEng = {
     }else {
       o.innerHTML = 'Fechar';
     };
+
+    o.addEventListener('click', () => {
+      document.querySelector('.dialogue').classList.replace('flex', 'none');})
     
     document.querySelector('.dialogue').appendChild(o);
 
@@ -121,6 +124,4 @@ const objAppEng = {
     changeText(objApp,'intwo');
   }
 
-  document.querySelector('.dialogue-close').addEventListener('click', () => {
-    document.querySelector('.dialogue').classList.replace('flex', 'none');
-  })
+  

@@ -67,6 +67,24 @@ setInterval(updateClock, 60000);
 
 //Functions
 
+function windowHour() {
+  let now = new Date()
+  let hour = now.getHours();
+
+  if(hour >= 18 || hour < 5) {
+    document.querySelector('.desk-window').style.backgroundColor = 'red';
+  }else if(hour >= 5 && hour <= 7) {
+    document.querySelector('.desk-window').style.backgroundColor = 'blue';
+  }else if(hour > 7 && hour <= 10) {
+    document.querySelector('.desk-window').style.backgroundColor = 'green';
+  }else if(hour > 10 && hour <= 14) {
+    document.querySelector('.desk-window').style.backgroundColor = 'yellow';
+  }else if(hour > 14 && hour < 18) {
+    document.querySelector('.desk-window').style.backgroundColor = 'pink';
+}}
+
+windowHour()
+
 function buttonBack() {
   if (currentBack <= 0) {
     firstScreen.classList.replace('none', 'flex');
