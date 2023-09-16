@@ -2213,6 +2213,18 @@ table {
   border: 1px solid black;
 }
 
+.dialogue-close {
+  position: absolute;
+  bottom: 232px;
+  right: 10px;
+  font-size: 25px;
+  background-color: red;
+  color: white;
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+}
+
 .dialogue-animation {
     animation-name: chair-animation;
     animation-duration: 10s;
@@ -2270,7 +2282,7 @@ table {
 
 .desk-poster {
   position: relative;
-  bottom: 800px;
+  bottom: 950px;
   right: 150px;
   background-image: url(../Images/poster.png);
   background-position: center;
@@ -2293,8 +2305,43 @@ table {
   height: 300px;
 }
 
+.desk-eng {
+  position: relative;
+  bottom: 1150px;
+  right: 40px;
+  background-color: red;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
 
+.desk-eng:hover {
+  transition: 1s ease;
+  border: 3px solid black;
+  box-shadow: 3px 3px 3px black;
+}
 
+.desk-br {
+  position: relative;
+  bottom: 1140px;
+  right: 70px;
+  background-color: blue;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.desk-br:hover {
+  transition: 1s ease;
+  border: 3px solid black;
+  box-shadow: 3px 3px 3px black;
+}
+
+.lang {
+  transition: 1s ease;
+  border: 3px solid black;
+  box-shadow: 3px 3px 3px black;
+}
 
 
 /* responsividade*/
@@ -2331,6 +2378,15 @@ table {
     bottom: 1000px;
     left: 250px;
     width: 120px;
+  }
+
+  .desk-eng {
+    bottom: 1080px;
+  }
+
+  .desk-br {
+    bottom: 1130px;
+    right: 120px;
   }
 }
 
@@ -2418,6 +2474,16 @@ table {
     bottom: 550px;
     left: -80px;
   }
+
+  .desk-eng {
+    bottom: 870px;
+    left: 350px;
+  }
+
+  .desk-br {
+    bottom: 900px;
+    right: 30px;
+  }
 }
 
 @media (max-width: 540px) {
@@ -2453,6 +2519,18 @@ table {
 
   .sd-drums {
     display: none;
+  }
+
+  .desk-eng {
+    bottom: 420px;
+    left: 300px;
+    z-index: 2;
+  }
+
+  .desk-br {
+    bottom: 470px;
+    left: 50px;
+    z-index: 2;
   }
 }
 

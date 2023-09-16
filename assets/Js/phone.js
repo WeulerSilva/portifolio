@@ -155,7 +155,11 @@ menu.addEventListener('click', () => {
   secondScreen.classList.replace('none', 'flex');
   bottons.classList.replace('none', 'flex');
 
-  changeText(objApp,'menu');
+  if(languageEng) {
+    changeText(objAppEng,'menu');
+  }else {
+    changeText(objApp,'menu');
+  }
   currentBack++;
   buttonBack();
 });
@@ -428,24 +432,39 @@ document.querySelector('.i-config').addEventListener('click', () => {
 })
 
 
+if(languageEng) {
+  document.querySelector('.desk-eng').classList.add('lang');
+}else {
+  document.querySelector('.desk-br').classList.add('lang');
+}
 
 
-
-
-
-
-document.querySelector('footer button').addEventListener('click', () => {
-
-  // Alterna o valor da variável languageEng
-  languageEng = !languageEng;
+document.querySelector('.desk-eng').addEventListener('click', () => {
+  if(languageEng === false) {
+    // Alterna o valor da variável languageEng
+  languageEng = true;
 
   // Armazena o valor atual de languageEng no localStorage
   localStorage.setItem('languageEng', languageEng);
 
   // Recarrega a página para exibir o conteúdo no novo idioma
   location.reload();
+  }
+})
 
-  console.log(languageEng)
+document.querySelector('.desk-br').addEventListener('click', () => {
+  if(languageEng === true) {
+    // Alterna o valor da variável languageEng
+  languageEng = false;
+
+  // Armazena o valor atual de languageEng no localStorage
+  localStorage.setItem('languageEng', languageEng);
+
+  // Recarrega a página para exibir o conteúdo no novo idioma
+  location.reload();
+  }
+
+  
 })
 
 

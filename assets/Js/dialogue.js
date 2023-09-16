@@ -1,4 +1,6 @@
 const objApp = {
+    intwo:
+    "Bem-vindo ao meu mundo criativo! Aqui e onde minha jornada artística e profissional ganha vida.  Sinta-se à vontade para mergulhar profundamente em cada seção e descobrir as histórias por trás de cada projeto.Se você estiver interessado em colaborar, discutir oportunidades ou simplesmente trocar ideias, estou sempre aberto a novas conexões e conversas. Não hesite em entrar em contato através dos meios fornecidos aqui.",
     menu:
       "Meu celular vai funcionar como uma janela para você explorar minha jornada profissional! Apresentando o Portfólio Simulado, imagine segurar um celular em suas mãos e deslizar pelos destaques da minha carreira, projetos e habilidades. Navegue pelas telas como se estivesse usando um aplicativo de última geração e mergulhe em cada projeto com detalhes cativantes. Com uma interface amigável e intuitiva, você pode rolar, tocar e explorar os detalhes de cada trabalho que realizei. Quer saber mais sobre mim? Basta abrir os apps do meu portfólio simulado para descobrir meu conjunto de habilidades, meu histórico profissional e meus contatos!!!",
     weather:
@@ -31,6 +33,10 @@ const objApp = {
     };
 
 const objAppEng = {
+  intwo:
+  "Welcome to my creative world! This is where my artistic and professional journey comes to life. Feel free to dive deep into each section and discover the stories behind each project. Whether you're interested in collaborating, discussing opportunities, or simply exchanging ideas, I'm always open to new connections and conversations. Do not hesitate to get in touch using the means provided here.",
+  menu:
+    "My phone will act as a window for you to explore my professional journey! Introducing the Mock Portfolio, imagine holding a cell phone in your hands and swiping through my career highlights, projects and skills. Navigate screens as if you were using a high-end app and immerse yourself in each project in distinctive detail. With a friendly and intuitive interface, you can browse, tap and explore the details of each job you perform. Want to know more about me? Just open my mock portfolio apps to discover my skill set, my professional history and my contacts!!!",
   weather:
       'Introducing the weather app: a simple and intuitive app! With a user-friendly interface, you can explore real-time weather forecasts for any city. Get accurate real-time weather information for any city you want.With it I managed to improve my knowledge with APIs!',
   camera:
@@ -81,9 +87,21 @@ const objAppEng = {
     let p = document.createElement('p');
     p.setAttribute('id', 'dialogue-text');
     document.querySelector('.dialogue').appendChild(p);
+
     let i = document.createElement('div');
     i.classList.add('dialogue-arrow');
     document.querySelector('.dialogue').appendChild(i);
+
+    let o = document.createElement('div');
+    o.classList.add('dialogue-close');
+
+    if(languageEng) {
+      o.innerHTML = 'Close';
+    }else {
+      o.innerHTML = 'Fechar';
+    };
+    
+    document.querySelector('.dialogue').appendChild(o);
 
     document.querySelector('.desk-chair').classList.add('dialogue-animation');
 
@@ -97,4 +115,12 @@ const objAppEng = {
     }
   }
 
-  
+  if(languageEng) {
+    changeText(objAppEng,'intwo');
+  }else {
+    changeText(objApp,'intwo');
+  }
+
+  document.querySelector('.dialogue-close').addEventListener('click', () => {
+    document.querySelector('.dialogue').classList.replace('flex', 'none');
+  })
