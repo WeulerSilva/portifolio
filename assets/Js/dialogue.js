@@ -120,6 +120,10 @@ const objAppEng = {
 
   if(languageEng) {
     changeText(objAppEng,'intwo');
+    document.querySelector('.desk-back').innerHTML = '';
+    document.querySelector('.desk-back').innerHTML = 'Back';
+    document.querySelector('.drums-back').innerHTML = '';
+    document.querySelector('.drums-back').innerHTML = 'Back';
   }else {
     changeText(objApp,'intwo');
   }

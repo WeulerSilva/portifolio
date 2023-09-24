@@ -458,17 +458,14 @@ if(languageEng) {
 
 
 document.querySelector('.desk-eng').addEventListener('click', () => {
+  document.querySelector('.desk-back').innerHTML = '';
+  document.querySelector('.desk-back').innerHTML = 'Back';
   if(languageEng === false) {
-    // Alterna o valor da variável languageEng
   languageEng = true;
-
-  // Armazena o valor atual de languageEng no localStorage
   localStorage.setItem('languageEng', languageEng);
-
-  // Recarrega a página para exibir o conteúdo no novo idioma
   location.reload();
   }
-})
+});
 
 document.querySelector('.desk-br').addEventListener('click', () => {
   if(languageEng === true) {
@@ -502,11 +499,31 @@ document.querySelector('.sd-drums').addEventListener('click' , () => {
   secondDesk.style.display = 'none';
   drums.style.display = 'flex';
   deskImg.style.position = 'absolute';
+  document.querySelector('.drums-back').classList.replace('none', 'flex');
 });
 
 document.querySelector('.sd-phone').addEventListener('click' , () => {
   secondDesk.style.display = 'none';
   phone.style.display = 'flex';
   deskImg.style.position = 'absolute';
+  document.querySelector('.desk-back').classList.replace('none', 'flex');
+  document.querySelector('.desk-eng').style.display = 'none';
+  document.querySelector('.desk-br').style.display = 'none';
+  document.querySelector('.desk-led').style.display = 'none';
+  document.querySelector('.desk-led-t').style.display = 'none';
   //deskImg.style.bottom = '330px';
+});
+
+document.querySelector('.desk-back').addEventListener('click', () => {
+  phone.style.display = 'none';
+  secondDesk.style.display = 'flex';
+  document.querySelector('.desk-eng').style.display = 'flex';
+  document.querySelector('.desk-br').style.display = 'flex';
+});
+
+document.querySelector('.drums-back').addEventListener('click', () => {
+  drums.style.display = 'none';
+  secondDesk.style.display = 'flex';
+  document.querySelector('.desk-eng').style.display = 'flex';
+  document.querySelector('.desk-br').style.display = 'flex';
 });

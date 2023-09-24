@@ -1594,6 +1594,12 @@ table {
 }
 
 /*app jogo da memoria*/
+.i-memory {
+  background-image: url(../Media/phone/memory-icon2.png);
+  background-position: center;
+  background-size: cover;
+}
+
 .memory {
   justify-content: flex-start;
   align-items: center;
@@ -1688,6 +1694,12 @@ table {
 }
 
 /*app internet*/
+.i-internet {
+  background-image: url(../Media/phone/internet-icon2.png);
+  background-position: center;
+  background-size: cover;
+}
+
 .internet {
   justify-content: flex-start;
   align-items: center;
@@ -1716,6 +1728,8 @@ table {
   background-color: red;
   width: 50px;
   height: 50px;
+  font-size: 55px;
+  color: white;
 }
 
 .inter-header-search {
@@ -1816,6 +1830,12 @@ table {
 }
 
 /*app Quiz*/
+.i-quiz {
+  background-image: url(../Media/phone/quiz-icon2.png);
+  background-position: center;
+  background-size: cover;
+}
+
 .quiz {
   justify-content: flex-start;
   align-items: center;
@@ -1911,6 +1931,12 @@ table {
 }
 
 /* app contact */
+.i-contact {
+  background-image: url(../Media/phone/contact-icon.png);
+  background-position: center;
+  background-size: cover;
+}
+
 .contact {
   justify-content: space-between;
   flex-direction: column;
@@ -2040,6 +2066,12 @@ table {
 }
 
 /*app holiday*/
+.i-carrer {
+  background-image: url(../Media/phone/bio-icon.png);
+  background-position: center;
+  background-size: cover;
+}
+
 .i-calendar {
   background-image: url(../Media/phone/calendar-icon.png);
   background-position: center;
@@ -2178,6 +2210,12 @@ table {
 
 
 /*app config */
+.i-config {
+  background-image: url(../Media/phone/config-icon.png);
+  background-position: center;
+  background-size: cover;
+}
+
 .config {
   justify-content: flex-start;
   align-items: center;
@@ -2253,9 +2291,10 @@ table {
   justify-content: space-around;
   align-items: center;
   position: absolute;
-  background-color: green;
+  background-color: #c5c7c8;
   width: 60vw;
   height: 20vh;
+  border: 1px solid black;
 }
 
 .sd-drums {
@@ -2394,6 +2433,33 @@ table {
   transform: rotate(-1deg);
 }
 
+.desk-back {
+  position: relative;
+  bottom: 520px;
+  left: 270px;
+  background-color: #c5c7c8;
+  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 25px;
+  color: white;
+  font-weight: 600;
+}
+
+.drums-back {
+  position: relative;
+  margin-top: 335px;
+  right: -30px;
+  background-color: #c5c7c8;
+  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 25px;
+  color: white;
+  font-weight: 600;
+}
 
 
 /* responsividade*/
@@ -2543,6 +2609,10 @@ table {
 
   .desk-led-t {
     bottom: 842px;
+  }
+
+  .drums-back {
+    margin-top: 235px;
   }
 }
 
