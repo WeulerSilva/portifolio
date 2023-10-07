@@ -458,8 +458,6 @@ if(languageEng) {
 
 
 document.querySelector('.desk-eng').addEventListener('click', () => {
-  document.querySelector('.desk-back').innerHTML = '';
-  document.querySelector('.desk-back').innerHTML = 'Back';
   if(languageEng === false) {
   languageEng = true;
   localStorage.setItem('languageEng', languageEng);
