@@ -43,7 +43,7 @@ function openContacts(item) {
     contactOpenC.classList.replace('none', 'flex');
 
     let makeDiv = document.createElement('div');
-    makeDiv.classList.add('contact-open-copie');
+    makeDiv.classList.add('contact-open-down');
 
     makeDiv.addEventListener('click', () => {
       downloadPdf()

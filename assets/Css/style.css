@@ -745,6 +745,9 @@ footer {
 
 .desk-tv-grey {
   cursor: pointer;
+  background-image: url(../Images/tv-icon.png);
+  background-position: center;
+  background-size: contain;
   background-color: grey;
   border-radius: 3px 3px 0px 0px;
   transform: rotateZ(0deg);
@@ -2007,6 +2010,9 @@ table {
 }
 
 .contact-footer-photo {
+  background-image: url(../Media/phone/contact-icon.png);
+  background-position: center;
+  background-size: contain;
   width: 50px;
   height: 50px;
   margin-bottom: 10px;
@@ -2053,6 +2059,31 @@ table {
   flex-direction: row;
   justify-content: space-around;
   z-index: 2;
+}
+
+.contact-open-copie {
+  background-image: url(../Media/phone/copie-icon.png);
+  background-position: center;
+  background-size: contain;
+}
+
+.contact-open-go {
+  background-image: url(../Media/phone/a-icon.png);
+  background-position: center;
+  background-size: contain;
+}
+
+.contact-open-down {
+  background-image: url(../Media/phone/download-icon.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  background-color: #00FF00;
+  margin-bottom: 10px;
+  z-index: 2;
+  cursor: pointer;
 }
 
 .contact-open-copie,
@@ -2299,14 +2330,22 @@ table {
 
 .sd-drums {
   display: flex;
-  background-color: pink;
+  background-image: url(../Images/drum-icon.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 2px solid black;
   width: 100px;
   height: 100px;
 }
 
 .sd-phone {
   display: flex;
-  background-color: red;
+  background-image: url(../Images/phone-icon.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 2px solid black;
   width: 100px;
   height: 100px;
 }
@@ -2374,9 +2413,13 @@ table {
 
 .desk-eng {
   position: relative;
+  background-image: url(../Images/eng-icon.png);
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 2px solid grey;
   bottom: 1150px;
   right: 40px;
-  background-color: red;
   width: 50px;
   height: 50px;
   cursor: pointer;
@@ -2390,9 +2433,13 @@ table {
 
 .desk-br {
   position: relative;
+  background-image: url(../Images/br-icon.png);
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 2px solid grey;
   bottom: 1140px;
   right: 70px;
-  background-color: blue;
   width: 50px;
   height: 50px;
   cursor: pointer;
