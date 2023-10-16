@@ -1297,6 +1297,9 @@ footer {
 
 .git-h {
   position: relative;
+  background-image: url(../Media/phone/github-icon.png);
+  background-position: center;
+  background-size: contain;
   bottom: 5px;
   width: 40px;
   height: 40px;
@@ -2384,6 +2387,41 @@ table {
   background-repeat: no-repeat;
   width: 350px;
   height: 250px;
+}
+
+.desk-sundown {
+  background-image: url(../Images/sundown-icon.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.desk-sunup {
+  background-image: url(../Images/sunup-icon.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.desk-sunmid {
+  background-image: url(../Images/sunmid-icon.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.desk-sunafter {
+  background-image: url(../Images/sunafter-icon.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.desk-moon {
+  background-image: url(../Images/moon-icon.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .desk-poster {

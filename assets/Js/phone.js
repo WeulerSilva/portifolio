@@ -72,15 +72,15 @@ function windowHour() {
   let hour = now.getHours();
 
   if(hour >= 18 || hour < 5) {
-    document.querySelector('.desk-window').style.backgroundColor = 'red';
+    document.querySelector('.desk-window').classList.add('desk-moon');
   }else if(hour >= 5 && hour <= 7) {
-    document.querySelector('.desk-window').style.backgroundColor = 'blue';
+    document.querySelector('.desk-window').classList.add('desk-sunup');
   }else if(hour > 7 && hour <= 10) {
-    document.querySelector('.desk-window').style.backgroundColor = 'green';
+    document.querySelector('.desk-window').classList.add('desk-sunmid');
   }else if(hour > 10 && hour <= 14) {
-    document.querySelector('.desk-window').style.backgroundColor = 'yellow';
+    document.querySelector('.desk-window').classList.add('desk-sunafter');
   }else if(hour > 14 && hour < 18) {
-    document.querySelector('.desk-window').style.backgroundColor = 'pink';
+    document.querySelector('.desk-window').classList.add('desk-sundown');
 }}
 
 windowHour()
@@ -488,6 +488,7 @@ document.querySelector('.desk-br').addEventListener('click', () => {
   overlay.addEventListener('click', function () {
       videoIframe.src = videoIframe.src + '&autoplay=1';
       overlay.style.opacity = '0.8';
+      overlay.style.backgroundImage = 'none';
   });
 
 const deskImg = document.querySelector('.desk-img');
