@@ -2289,6 +2289,7 @@ table {
 }
 
 .dialogue-arrow {
+  display: none;
   position: absolute;
   background-color: #f3f2ef;
   border-radius: 100% 0% 100% 0% / 100% 100% 0% 0%;

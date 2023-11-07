@@ -10,26 +10,29 @@ const objectWebOne = {
   metallica: {
     a: 'METALLICA: Um site feito de fã para fã!',
     p: 'Site feito para fãs descobrirem e saberem curiosidades sobre a banda e seus membros.',
-    photo: 'cachorro.gif'
-  },
-  aleatorio: {
-    a: 'site ale',
-    p: 'esse site foi feito aleatoriamente e blablabla',
     photo: 'cachorro.gif',
-    link: 'https://github.com/WeulerSilva/portifolio/settings/pages'
+    link: 'https://weulersilva.github.io/metalica-fanpage/'
   },
-  aleatorio2: {
-    a: 'Bem aleatorio',
-    p: 'esse site e mais aleatorio ainda pq eu sei fazer nada blablabla',
-    photo: 'cachorro.gif'
+  xbox: {
+    a: 'XBOX: jogo Hogwarts Legacy!',
+    p: 'Landing page com replica exata do site do XBOX',
+    photo: 'cachorro.gif',
+    link: 'https://weulersilva.github.io/xbox/'
+  },
+  loopstudios: {
+    a: 'LOOPSTUDIOS: Imerção em VR',
+    p: 'Nós da LoopStudios vamos oferecer o poder do VR',
+    photo: 'cachorro.gif',
+    link: 'https://weulersilva.github.io/loopstudios-landing-page/'
   },
 };
 
 const objectWebTwo = {
   aleatorio3: {
-    a: 'AC/DC: Um site feito de fã para fã!',
-    p: 'Site feito para fãs descobrirem e saberem curiosidades sobre a banda e seus membros.',
-    photo: 'cachorro.gif'
+    a: 'NEWSLETTER',
+    p: 'Uma pagina de newsletter que serve para verificar um pequeno formulario.',
+    photo: 'cachorro.gif',
+    link: 'https://weulersilva.github.io/newsletter-challenger/'
   },
   aleatorio4: {
     a: 'IRON MAIDEN',
@@ -71,26 +74,29 @@ const objectWebOneEng = {
   metallica: {
     a: 'METALLICA: a web site make for fan to fan!',
     p: 'A website make to fan to fan and blabla.',
-    photo: 'cachorro.gif'
-  },
-  aleatorio: {
-    a: 'site ale',
-    p: 'esse site foi feito aleatoriamente e blablabla',
     photo: 'cachorro.gif',
-    link: 'https://github.com/WeulerSilva/portifolio/settings/pages'
+    link: 'https://weulersilva.github.io/metalica-fanpage/'
   },
-  aleatorio2: {
-    a: 'Bem aleatorio',
-    p: 'esse site e mais aleatorio ainda pq eu sei fazer nada blablabla',
-    photo: 'cachorro.gif'
+  xbox: {
+    a: 'XBOX: Hogwarts Legacy The Game',
+    p: 'Landing page with replica exacly of xbox.',
+    photo: 'cachorro.gif',
+    link: 'https://weulersilva.github.io/xbox/'
+  },
+  loopstudios: {
+    a: 'LOOPSTUDIOS: The imersive experiences in VR',
+    p: 'The most imersive in the world of VR',
+    photo: 'cachorro.gif',
+    link: 'https://weulersilva.github.io/loopstudios-landing-page/'
   },
 };
 
 const objectWebTwoEng = {
-  aleatorio3: {
-    a: 'AC/DC: englis!',
-    p: 'Site feito para fãs descobrirem e saberem curiosidades sobre a banda e seus membros.',
-    photo: 'cachorro.gif'
+  newsletter: {
+    a: 'NEWSLETTER: The formulary',
+    p: 'A simple formulary of a newsletter for training and responsive',
+    photo: 'cachorro.gif',
+    link: 'https://weulersilva.github.io/newsletter-challenger/'
   },
   aleatorio4: {
     a: 'IRON MAIDEN',
@@ -140,7 +146,8 @@ function creatSite(objName) {
   const interPhoto = creatElem('div', 'inter-body-photo');
 
   const a = document.createElement('a');
-  a.setAttribute('href', 'https://github.com/WeulerSilva/portifolio/settings/pages')
+  a.setAttribute('href', `${objName.link}`);
+  a.setAttribute('target','_blank');
   a.innerHTML = objName.a;
   const pEl = document.createElement('p');
   pEl.innerHTML = objName.p;
