@@ -2757,6 +2757,15 @@ table {
   }
 }
 
+@media (max-width: 375px) {
+  .dialogue {
+    height: 33vh;
+  }
+  .container {
+    height: calc(121vh - 25px);
+}
+}
+
 
 
 
@@ -2803,6 +2812,12 @@ table {
     top: 20px;
   }
 }
+@media (max-height: 600px) {
+  .dialogue-close {
+    margin-bottom: 168px;
+  }
+}
+
 
 /*.dialogue {
   color: red;
