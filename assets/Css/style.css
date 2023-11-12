@@ -2304,7 +2304,7 @@ table {
 
 .dialogue-close {
   position: absolute;
-  bottom: 232px;
+  margin-bottom: 232px;
   right: 10px;
   font-size: 25px;
   background-color: red;
@@ -2757,6 +2757,33 @@ table {
   }
 }
 
+
+
+@media (max-height: 750px) {
+  .container {
+    height: calc(108vh - 25px);
+    background-position: -28px -65px;
+  }
+  .dialogue-close {
+    margin-bottom: 200px;
+  }
+}
+
+@media (max-height: 700px) {
+  .dialogue {
+    top: 15px;
+  }
+}
+
+@media (max-height: 670px) {
+  .container {
+    height: calc(118vh - 25px);
+    background-position: -28px -65px;
+  }
+  .dialogue {
+    top: 20px;
+  }
+}
 
 /*.dialogue {
   color: red;
