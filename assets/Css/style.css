@@ -2763,7 +2763,10 @@ table {
   }
   .container {
     height: calc(121vh - 25px);
-}
+  }
+  .dialogue-close {
+    margin-bottom: 260px;
+  }
 }
 
 
