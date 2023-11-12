@@ -2759,6 +2759,25 @@ table {
 
 
 
+
+@media (min-height: 1000px) {
+  .desk-img {
+    bottom: 354px;
+  }
+}
+
+@media (min-height: 1125px) {
+  .desk-img {
+    bottom: 412px;
+  }
+}
+
+@media (min-height: 1312px) {
+  .desk-img {
+    bottom: 494px;
+  }
+}
+
 @media (max-height: 750px) {
   .container {
     height: calc(108vh - 25px);
