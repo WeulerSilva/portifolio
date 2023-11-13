@@ -2791,8 +2791,11 @@ table {
 }
 
 @media (max-height: 750px) {
+  body {
+    overflow: auto;
+  }
   .container {
-    height: calc(108vh - 25px);
+    height: calc(131vh - 25px);
     background-position: -28px -65px;
   }
   .dialogue-close {
@@ -2807,6 +2810,9 @@ table {
 }
 
 @media (max-height: 670px) {
+  body {
+    overflow: auto;
+  }
   .container {
     height: calc(118vh - 25px);
     background-position: -28px -65px;
@@ -2814,9 +2820,6 @@ table {
   .dialogue {
     top: 20px;
   }
-}
-@media (max-height: 600px) {
-  
 }
 
 
