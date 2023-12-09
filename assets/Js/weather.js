@@ -89,11 +89,3 @@ function showInfo(json) {
 function showWarning(msg) {
   document.querySelector('.aviso').innerHTML = msg;
 };
-
-/*Depois criar um if e else para mudar o texto que o meu personagem fala
-de acordo com o resultado do clima por exemplo:
-Nossa em ${nomeDaCidade} esta fazendo ${} graus esta bem quente/frio.
-
-Ou seja ter varios comentarios de acordo com os aplicativos,fazendo isso no proprio
-codigo dos apps sem precisar criar outro arquivos js para fazer isso.
-*/
